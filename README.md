@@ -189,8 +189,8 @@ PAM配列：NGG
   1. U6プロモータを使ってガイドRNAを発現させる場合は、プロトスペーサ配列の5´末端がGでなければならない。
   2. また、[Addgene]（https://www.addgene.org/）に寄託されている[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）などに対してBpiIによる制限酵素処理&ライゲーションでプロトスペーサ配列を組み込む場合には、BpiIに適合した突出末端を形成するようにアダプター配列をつけておく必要がある。
   - (i)(ii)を考慮した場合、プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させる[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）を作製するには下記の二種類の一本鎖オリゴヌクレオチドが必要となる。
-    - `5´- caccGaccaccaggctacgagcgga     -3´`
-    - `3´-      tggtggtccgatgctcgcctcaaa -5´`
+    - `5´-caccGaccaccaggctacgagcgga____-3´`
+    - `3´-_____tggtggtccgatgctcgcctcaaa-5´`
 
 11. 一本鎖オリゴヌクレオチドを注文します。
   - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
