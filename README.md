@@ -144,49 +144,53 @@ s
 #### 【使用例】CRISPRdirectを使って、ノックアウトのための標的を設計する
 
 1. 検索配列を入力します。
-![Fig-2]()
+![]()
+
 2. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
 >MYOG
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-![Fig-2]()
+![]()
+![]()
 
 3. Cas9のPAM配列を入力します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
-![Fig-2]()
+![]()
 
 4. 特異性を確認するゲノムを指定します。今回は最新のヒトゲノムリファレンスである"Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)"とします。
 ゲノム：Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)
-![Fig-2]()
+![]()
 
 5. "design"をクリックします。
-![Fig-2]()
+![]()
 
 6. Resultsの表示を確認します。
-![Fig-2]()
+![]()
 
 7. ゲノムに対して特異的なターゲットを表示するために、"show highly specific target only"にチェックをいれて更新します（更新は自動で行われます）。
-![Fig-2]()
+![]()
 
 8. "20mer+PAM"が1で、なおかつ"12mer+PAM"と"8mer+PAM"の数がなるべく少ない標的を選択し、配列をコピーします。
-![Fig-2]()
+![]()
 
 9. SnapGene Viewerを開き、Edit -> Find -> Find DNA sequenceで配列検索スペースを開き、選択したプロトスペーサ配列"accaccaggctacgagcgga"を検索する
-![Fig-2]()
+![]()
+![]()
 
 9. 緑色で表示されたプロトスペーサ配列"accaccaggctacgagcgga"とその3´末端に隣接するPAM結合サイト"cgg"にフィーチャーをつける。ストランドが把握しやすいように工夫する。
-![Fig-2]()
+![]()
+![]()
+![]()
 
 10. プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させるマテリアル（ベクター等）の作製に用いる一本鎖オリゴヌクレオチドを設計して注文する。
-![Fig-2]()
 
 - （例）U6プロモータを介したガイドRNA発現ベクターを作製する場合
   1. U6プロモータを使ってガイドRNAを発現させる場合は、プロトスペーサ配列の5´末端がGでなければならない。
   2. また、[Addgene]（https://www.addgene.org/）に寄託されている[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）などに対してBpiIによる制限酵素処理&ライゲーションでプロトスペーサ配列を組み込む場合には、BpiIに適合した突出末端を形成するようにアダプター配列をつけておく必要がある。
   - (i)(ii)を考慮した場合、プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させる[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）を作製するには下記の二種類の一本鎖オリゴヌクレオチドが必要となる。
-    - 5´- caccGaccaccaggctacgagcgga     -3´
-    - 3´-      tggtggtccgatgctcgcctcaaa -5´
+    - `5´- caccGaccaccaggctacgagcgga     -3´`
+    - `3´-      tggtggtccgatgctcgcctcaaa -5´`
 
 11. 一本鎖オリゴヌクレオチドを注文します。
   - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
