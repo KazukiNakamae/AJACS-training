@@ -144,44 +144,44 @@ s
 #### 【使用例】CRISPRdirectを使って、ノックアウトのための標的を設計する
 
 1. 検索配列を入力します。
-![]()
+![](/images/1h.png)
 
 2. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
 >MYOG
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-![]()
-![]()
+![](/images/1i.png)
+![](/images/1j.png)
 
 3. Cas9のPAM配列を入力します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
-![]()
+![](/images/1k.png)
 
 4. 特異性を確認するゲノムを指定します。今回は最新のヒトゲノムリファレンスである"Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)"とします。
 ゲノム：Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)
-![]()
+![](/images/1l.png)
 
 5. "design"をクリックします。
-![]()
+![](/images/1m.png)
 
 6. Resultsの表示を確認します。
-![]()
+![](/images/1n.png)
 
 7. ゲノムに対して特異的なターゲットを表示するために、"show highly specific target only"にチェックをいれて更新します（更新は自動で行われます）。
-![]()
+![](/images/1o.png)
 
 8. "20mer+PAM"が1で、なおかつ"12mer+PAM"と"8mer+PAM"の数がなるべく少ない標的を選択し、配列をコピーします。
-![]()
+![](/images/1p.png)
 
 9. SnapGene Viewerを開き、Edit -> Find -> Find DNA sequenceで配列検索スペースを開き、選択したプロトスペーサ配列"accaccaggctacgagcgga"を検索する
-![]()
-![]()
+![](/images/1q.png)
+![](/images/1r.png)
 
 9. 緑色で表示されたプロトスペーサ配列"accaccaggctacgagcgga"とその3´末端に隣接するPAM結合サイト"cgg"にフィーチャーをつける。ストランドが把握しやすいように工夫する。
-![]()
-![]()
-![]()
+![](/images/1s.png)
+![](/images/1t.png)
+![](/images/1u.png)
 
 10. プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させるマテリアル（ベクター等）の作製に用いる一本鎖オリゴヌクレオチドを設計して注文する。
 
@@ -190,17 +190,19 @@ PAM配列：NGG
   2. また、[Addgene]（https://www.addgene.org/）に寄託されている[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）などに対してBpiIによる制限酵素処理&ライゲーションでプロトスペーサ配列を組み込む場合には、BpiIに適合した突出末端を形成するようにアダプター配列をつけておく必要がある。
   - (i)(ii)を考慮した場合、プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させる[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）を作製するには下記の二種類の一本鎖オリゴヌクレオチドが必要となる。
     - `5´-caccGaccaccaggctacgagcgga____-3´`
-    - `3´-_____tggtggtccgatgctcgcctcaaa-5´`
+    - `3´-____Ctggtggtccgatgctcgcctcaaa-5´`
 
 11. 一本鎖オリゴヌクレオチドを注文します。
   - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
-![Fig-2]()
+![](/images/1v.png)
+FASMACのオリゴDNA注文画面
 
 12. 注文後、CRISPR-Cas9システムを動かすためのマテリアルの作製を行い、ゲノム編集実験を行う。詳しくは下記の参考文献を参照してください。
-![Fig-2]()
 
 ##### 参考文献
-  * 山本 卓、佐久間 哲史（2019）.「完全版 ゲノム編集実験スタンダード〜CRISPR-Cas9の設計・作製と各生物種でのプロトコールを徹底解説 (実験医学別冊)」 羊土社
+  * [Ran, F., Hsu, P., Wright, J. et al. Genome engineering using the CRISPR-Cas9 system. Nat Protoc 8, 2281–2308 (2013).](https://doi.org/10.1038/nprot.2013.143)
+  * [Zhang Lab CRISPR Plasmids](https://www.addgene.org/crispr/zhang/)
+  * [山本 卓、佐久間 哲史（2019）.「完全版 ゲノム編集実験スタンダード〜CRISPR-Cas9の設計・作製と各生物種でのプロトコールを徹底解説 (実験医学別冊)」 羊土社](https://www.yodosha.co.jp/yodobook/book/9784758122443/)
 
 ##### 関連ツール
 - [COSMID](https://crispr.bme.gatech.edu/)
