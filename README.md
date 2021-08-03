@@ -187,8 +187,8 @@ PAM配列：NGG
 
 - （例）U6プロモータを介したガイドRNA発現ベクターを作製する場合
   1. U6プロモータを使ってガイドRNAを発現させる場合は、プロトスペーサ配列の5´末端がGでなければならない。
-  2. また、[Addgene]（https://www.addgene.org/）に寄託されている[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）などに対してBpiIによる制限酵素処理&ライゲーションでプロトスペーサ配列を組み込む場合には、BpiIに適合した突出末端を形成するようにアダプター配列をつけておく必要がある。
-  - (i)(ii)を考慮した場合、プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させる[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）を作製するには下記の二種類の一本鎖オリゴヌクレオチドが必要となる。
+  2. また、[Addgene](https://www.addgene.org/)に寄託されている[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド](https://www.addgene.org/42230/)などに対してBpiIによる制限酵素処理&ライゲーションでプロトスペーサ配列を組み込む場合には、BpiIに適合した突出末端を形成するようにアダプター配列をつけておく必要がある。
+  - (i)(ii)を考慮した場合、プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させる[pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド](https://www.addgene.org/42230/)を作製するには下記の二種類の一本鎖オリゴヌクレオチドが必要となる。
     - `5´-caccGaccaccaggctacgagcgga____-3´`
     - `3´-____Ctggtggtccgatgctcgcctcaaa-5´`
 
@@ -219,40 +219,42 @@ FASMACのオリゴDNA注文画面
     - [論文](https://doi.org/10.1093/nar/gky354)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2021.023)
     トップページ
-    ![Fig-1]()      
+    ![](/images/2a.png)
     検索にヒットした標的候補のマップ（緑色が高い特異性をもつ標的）
-    ![Fig-2]()
+    ![](/images/2b.png)
     検索にヒットした標的候補一覧表
-    ![Fig-2]()
+    ![](/images/2c.png)
     "Cloning / PCR primers"をクリックするとガイドRNA構築に必要なオリゴヌクレオチド情報等が表示されます。
-    ![Fig-2]()
-    ![Fig-2]()
-    ![fig-3]()
+    ![](/images/2d.png)
+    ![](/images/2e.png)
+    ![](/images/2f.png)
     "show all..."->"Off-target primers"をクリックすると、各オフターゲットサイトに対するPCRプライマーが表示されます。
-    ![fig-4]()
+    ![](/images/2h.png)
+    ![](/images/2i.png)
+    ![](/images/2j.png)
 - 標的候補一覧表の見方
-  ![Fig-2]()
+  ![](/images/2k.png)
   - "Position/Strand"
     - 数字はターゲットの位置になります。
     - "fw/revでゲノムリファレンス上でどちらのstrand属するかを指します。
   - "Guide Sequence + PAM + Restriction Enzymes + Variants"
     - 標的の配列情報を指します。Restriction EnzymesはRFLP法で利用可能な制限酵素サイトを指します。VariantsはSNPを示しており、SNPを対象としたい場合はこの情報をもとに標的を選択することができます。
   - "MIT Specificity Score"
-    - (Hsu et al. Nat Biotech 2013)に基づいた特異性スコアです。高いほど特異性が高いとされ、50以上が推奨されています。
+    - [Hsu et al. Nat Biotech 2013](https://doi.org/10.1038/nbt.2647)に基づいた特異性スコアです。高いほど特異性が高いとされ、50以上が推奨されています。
   - "CFD Spec. score"
-    - (Doench et al. Nat Biotech 2016)に基づいた特異性スコアです。
+    - [Doench et al. Nat Biotech 2016](https://doi.org/10.1038/nbt.3437)に基づいた特異性スコアです。
   - "Predicted Efficiency"
-    - "Doench '16"は(Fusi et al. preprint 2015)[https://doi.org/10.1101/021568]と(Doench et al. Nat Biotech 2016)[https://doi.org/10.1038/nbt.3437]に基づいた予測切断活性のスコアです。CRISPR-Cas9をレンチウイルス導入したときの活性データを参考に作られています。
-    - "Mor.-Mateos"は(Moreno-Mateos et al. Nat Method 2015)[https://doi.org/10.1038/nmeth.3543]に基づいた予測切断活性のスコアです。CRISPR-Cas9をレンチウイルス導入したときの活性データに基づいています。CRISPR-Cas9をゼブラフィッシュの胚にインジェクション導入したときの活性データを参考に作られています。in vivoでのゲノム編集を行う場合にはこちらのほうがより参考になると考えられています。
+    - "Doench '16"は[Fusi et al. preprint 2015](https://doi.org/10.1101/021568)と[Doench et al. Nat Biotech 2016](https://doi.org/10.1038/nbt.3437)に基づいた予測切断活性のスコアです。CRISPR-Cas9をレンチウイルス導入したときの活性データを参考に作られています。
+    - "Mor.-Mateos"は[Moreno-Mateos et al. Nat Method 2015](https://doi.org/10.1038/nmeth.3543)に基づいた予測切断活性のスコアです。CRISPR-Cas9をレンチウイルス導入したときの活性データに基づいています。CRISPR-Cas9をゼブラフィッシュの胚にインジェクション導入したときの活性データを参考に作られています。*in vivo*でのゲノム編集を行う場合にはこちらのほうがより参考になると考えられています。
   - "Outcome"
-    - "Out-of-Frame"は(Bae et al. Nat Method 2014)に基づいて欠失によるフレームシフトの起こりやすさを予測したものです。値をクリックすると実際の予測変異パターンを見ることができます。
-    - "Lindel"は(Wei Chen et al, Nucleic Acids Research 2019)に基づいて欠失・挿入によるフレームシフトの起こりやすさを予測したものです。値をクリックすると実際の予測変異パターンを見ることができます。
+    - "Out-of-Frame"は[Bae et al. Nat Method 2014](https://doi.org/10.1038/nmeth.3015)に基づいて欠失によるフレームシフトの起こりやすさを予測したものです。値をクリックすると実際の予測変異パターンを見ることができます。
+    - "Lindel"は[Wei Chen et al, Nucleic Acids Research 2019](https://doi.org/10.1093/nar/gkz487)に基づいて欠失・挿入によるフレームシフトの起こりやすさを予測したものです。値をクリックすると実際の予測変異パターンを見ることができます。
   - "Off-targets for 0-1-2-3-4 mismatches + next to PAM"
     - オフターゲットサイトの数を標的配列とのミスマッチ数ごとに表示しています。最初の数字（ミスマッチ0でのオフターゲットサイト）が0である標的が最低限特異的な標的です。
   - "Genome Browser links to matches sorted by CFD off-target score"
     - CFD off-target scoreが高い順にオフターゲットサイトが表示されています。
     - マウスオーバーするとScoreとミスマッチ領域を参照できます。
-    - クリックすると(UCSC Genome Browser)[http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr14%3A70883813%2D70883835&hgsid=1134497385_rBlE26ARXxLLm13wxuXQRiQjwHHc]にジャンプし、オフターゲットサイトの情報を細かく参照できます。
+    - クリックすると[UCSC Genome Browser](http://genome.ucsc.edu/cgi-bin/hgTracks?db=hg19&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr14%3A70883813%2D70883835&hgsid=1134497385_rBlE26ARXxLLm13wxuXQRiQjwHHc)にジャンプし、オフターゲットサイトの情報を細かく参照できます。
 
 ----
 
@@ -260,58 +262,64 @@ FASMACのオリゴDNA注文画面
 
 1. 名前を入力します（入力しなくても可）。
 MYOG
-![Fig-2]()
+![](/images/2l.png)
 
 2. 検索配列を入力します。
-![Fig-2]()
+![](/images/2m.png)
 
 3. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-![Fig-2]()
+![](/images/1i.png)
+![](/images/2n.png)
 
 4. 特異性を確認するゲノム+SNPデータベースを指定します。今回は最新のヒトゲノムリファレンスである"Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar"とします。
 ゲノム+SNPデータベース：Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar
-![Fig-2]()
+![](/images/2o.png)
 
 5. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
-PAM配列：NGG
-![Fig-2]()
+PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
+![](/images/2p.png)
 
 6. "SUBMIT"をクリックします。
-![Fig-2]()
+![](/images/2q.png)
 
 7. 結果が表示されるまで待ちます。
-![Fig-2]()
+![](/images/2r.png)
 
-8. 標的のリストが特異性が高い順に表示されます。ノックアウトする上では特異性が高く、なおかつ切断活性が低すぎなくて、フレームシフトが起こりやすい標的を選ぶのがベストです。今回の中では3番目にある"ACCACCAGGCTACGAGCGGA CGG"を選択します。
+8. 標的のリストが特異性が高い順に表示されます。ノックアウトする上では特異性が高く、なおかつ切断活性が低すぎず、フレームシフトが起こりやすい標的を選ぶのがベストです。
   1. 今回は次の基準で選んでみます。
   2. 特異性を示す"MIT Specificity Score"と"CFD Spec. score"がいずれも90を上回る
   3. 切断活性を示す"Doench '16"と"Mor.-Mateos"がいずれも25を下回らない
   4. フレームシフトの起こりやすさを示す"Out-of-Frame"と"Lindel"がいずれも60を上回る
-  - これを満たすのは"ACCACCAGGCTACGAGCGGA CGG"、"TCGAACCACCAGGCTACGAG CGG"の二標的となります。どちらでもよいですが今回は"TCGAACCACCAGGCTACGAG CGG"を選んでみます。
-![Fig-2]()
+  - これを満たすのは"ACCACCAGGCTACGAGCGGA CGG"、"TCGAACCACCAGGCTACGAG CGG"の二標的となります。どちらでもよいですが今回は"ACCACCAGGCTACGAGCGGA CGG"を選んでみます。
+![](/images/2s.png)
 
 9. "Cloning / PCR primers"をクリックして、構築に必要なオリゴヌクレオチド情報を表示します。
-![Fig-2]()
+![](/images/2t.png)
+![](/images/2u.png)
 
 10. [pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）でガイドRNAを発現させたい場合は"U6 expression from an Addgene plasmid"の項目へ行き、"Select your Addgene plasmid:"で"pX330-U6-Chimeric_BB-CBh-hSpCas9(Zhang lab) + derivatives"を選択します。
-![Fig-2]()
+![](/images/2v.png)
 
 11. 配列が自動で更新されるので、更新された"Primers for gN20 guides"を記録します。
 - gN20-guideRNA113fwU6sensepX330: CACCGaccaccaggctacgagcgga
 - gN20-guideRNA113fwU6antisensepX330: AAACtccgctcgtagcctggtggtC
-![Fig-2]()
+![](/images/2w.png)
 
 12. 一本鎖オリゴヌクレオチドを注文します。
    - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
+   ![](/images/2x.png)
 
-13. 注文後、CRISPR-Cas9システムを動かすためのマテリアルの作製を行い、ゲノム編集実験を行う。詳しくは下記の参考文献を参照してください。
-![Fig-2]()
+13. 注文後、CRISPR-Cas9システムを動かすためのマテリアルの作製を行い、ゲノム編集実験を行います。詳しくは下記の参考文献を参照してもよいですし、"Click here"示されているリンク先のプロトコールを参照しても大丈夫です。
+![](/images/2y.png)
+![](/images/2z.png)
 
 ##### 参考文献
-  * 山本 卓、佐久間 哲史（2019）.「完全版 ゲノム編集実験スタンダード〜CRISPR-Cas9の設計・作製と各生物種でのプロトコールを徹底解説 (実験医学別冊)」 羊土社
+  * [Ran, F., Hsu, P., Wright, J. et al. Genome engineering using the CRISPR-Cas9 system. Nat Protoc 8, 2281–2308 (2013).](https://doi.org/10.1038/nprot.2013.143)
+  * [Zhang Lab CRISPR Plasmids](https://www.addgene.org/crispr/zhang/)
+  * [山本 卓、佐久間 哲史（2019）.「完全版 ゲノム編集実験スタンダード〜CRISPR-Cas9の設計・作製と各生物種でのプロトコールを徹底解説 (実験医学別冊)」 羊土社](https://www.yodosha.co.jp/yodobook/book/9784758122443/)
 
 ##### 関連ツール
 - [CHOPCHOP](https://chopchop.cbu.uib.no)
