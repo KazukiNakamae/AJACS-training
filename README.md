@@ -574,8 +574,8 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 
 ##### ゲノム編集のためのデータベース・ツール一覧
 
-(ゲノム編集系のバイオインフォマティクス)[https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937]
-(https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937)[https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937]
+[ゲノム編集系のバイオインフォマティクス](https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937)
+[https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937](https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937)
 
 ### CRISPR-Cas9によるノックイン設計ツール
 
@@ -590,8 +590,8 @@ MMEJ等を利用したノックインはホモロジーアームが20-40bpほど
 これは500bp以上の配列をゲノムから取得する必要があるHRなどと比べると、簡便でなおかつさまざまな生物種で利用可能であることが示されています（マウス、カエル、藻類？、ヒト、ハムスター、魚）。
 
 #### [PITCh designer 2.0](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
-    - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
-    - [論文](https://doi.org/10.1080/21655979.2017.1313645)
+  - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
+  - [論文](https://doi.org/10.1080/21655979.2017.1313645)
 ![](/images/5a.png)
 
 入力例
