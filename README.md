@@ -545,10 +545,12 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 遺伝子座によってはフレームシフトを導入することで細胞の生存や増殖に大きな影響を与えてしまうケースがあり、そういったサンプルでは解析時のフレームシフト率が極端に低くなってしまいます。
 長期的な実験を行う際にそういった点を見落としていると大きな損失につながります。ゲノム編集する際には予備実験として編集した細胞集団のサブクローニング・TIDE解析を行うなどして、ちゃんとフレームシフト変異の取得が可能かを確認を行うのが無難でしょう。
 またこうした致死性等についてはデータベース上にヒントがある場合があります。たとえばヒト遺伝子だと[DepMap](https://depmap.org/portal/)等でGene essentialityの評価がでていますし、マウスでも[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)で胚性致死の確認等が可能です。その他[PubMed](https://pubmed.ncbi.nlm.nih.gov/)で遺伝子名を検索すればそういった類の情報が見つかる場合もあります。事前にインターネットを活用して十分にリサーチされることをお勧めします。
-[DepMap](https://depmap.org/portal/)
-![](/images/4p.png)
-[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)
-![](/images/4q.png)
+
+- [DepMap](https://depmap.org/portal/)
+  ![](/images/4p.png)
+
+- [IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)
+  ![](/images/4q.png)
 
 ##### 関連ツール
 - [SPROUT](https://zou-group.github.io/SPROUT)
