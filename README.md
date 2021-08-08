@@ -326,35 +326,36 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
   - Exonを参照しながらインタラクティブに標的を検索できるツール。
   - (統合TV)[https://doi.org/10.7875/togotv.2020.083]
 
+----
+
 ### CRISPR-Cas9を使ったノックアウト結果の予測
 
 #### DSBによる変異導入
 
   - CRISPR-Cas9やTALENといったゲノム編集ツールではDNA二本鎖切断（DSB）を引き起こし、その修復の結果発生するフレームシフト変異によってノックアウトを達成されます。
-  - 教科書的にはこの時の変異導入は"ランダム"と説明されることも多いですが、実際にはある程度の傾向があることが知られています。
-  - 哺乳類を問わず多くの生物種でみられるのが切断末端間にある相同配列がつながるような欠失変異パターンです。これらはMMEJやSSAなどといった修復経路によって引き起こされることが知られています。
-  - またヒト等の培養細胞では切断面がC|Cとなっていると一塩基欠失によりCになったり、切断面でPAM側でないほうがTである場合はTTというようなリピート型の一塩基挿入が発生しやすかったりすることが知られています(文献)[https://dx.doi.org/10.1038%2Fnbt.4317]。
+  - 教科書的にはこの時の変異導入はランダムと説明されることも多いですが、実際にはある程度の傾向があることが知られています。
+  - 哺乳類を問わず多くの生物種でみられるのが切断末端間にある相同配列がつながるような欠失変異パターンです。これらはMMEJ/SSAなどといった修復経路によって引き起こされることが知られています（※ゲノム編集の分野ではまとめてMMEJによる修復と呼ばれることが多い）。
+  - またヒト等の培養細胞では切断面がC|Cとなっていると一塩基欠失によりC一塩基になったり、切断面でPAM側に位置しない方のTがTTに変わるといったリピート型の挿入が発生しやすかったりすることが知られています(Allen et al. Nat Biotech 2019)[https://dx.doi.org/10.1038%2Fnbt.4317]。
   - このような変異パターンを事前に予測するためのツールを紹介します。
 
 #### [Microhomology-Predictor](http://www.rgenome.net/mich-calculator/)
-- DSBによって引き起こされるMMEJ/SSAによる欠失変異パターンを予測するツール
+- DSBによって引き起こされるMMEJによる欠失変異パターンを予測するツール
     - [http://www.rgenome.net/mich-calculator/](http://www.rgenome.net/mich-calculator/)
     - [論文](http://dx.doi.org/10.1038/nmeth.3015)
     トップページ
-    ![Fig-1]()      
+    ![](/images/3a.png)
     入力画面
-    ![Fig-2]()
+    ![](/images/3b.png)
     検索結果
-    ![fig-3]()
+    ![](/images/3u.png)
     詳細な変異パターン情報
-    ![fig-4]()
-    ![fig-5]()
+    ![](/images/3v.png)
 - 結果画面の見方
-  ![Fig-2]()
+  ![](/images/3x.png)
   - "Microhomology Score"
-    - MMEJ/SSAによる欠失変異のトータルでの起こりやすさを表します。
+    - MMEJによる欠失変異のトータルでの起こりやすさを表します。
   - "Out-of-frame Score"
-    - MMEJ/SSAによる欠失変異の中でもフレームシフト変異となるパターンの起こりやすさを表します。
+    - MMEJによる欠失変異の中でもフレームシフト変異となるパターンの起こりやすさを表します。
   - Microhomology：該当の変異パターンでつながる小さな相同配列（マイクロホモロジー配列）です。
   - Deletion Length：該当の変異パターンで引き起こされる欠失長を表します。
   - Pattern Score：該当の変異パターンの起こりやすさを表します。
@@ -363,53 +364,83 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 
 #### 【使用例】Microhomology-Predictorを使って、ノックアウト結果を予測して標的を決定する
 
-1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"と"TCGAACCACCAGGCTACGAGCGG"を例にとって、どちらがノックアウトに相応しそうか調べてみます。
+1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"（No.1：ピンク色）と"TCGAACCACCAGGCTACGAGCGG"（No.2：緑色）を例にとって、どちらがノックアウトに相応しそうか調べてみます。
+![](/images/3c.png)
 
-2. まず標的配列ごとに配列を入力します。Microhomology-Predictorは入力配列の中間に編集サイトがあるようにしなければちゃんと使えないのでそのようにします。
-  1. 具体的な手順としては次のようになります。
-  2. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
-  3. "Features"->"Add Cleavage Site..."で切断面を記録します。切断面はSpCas9の場合はPAM結合サイトの5´末端から-3ntの部分となります。
-  4. 切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
-  5. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
-  6. "Left_reference"と"Right_reference"の部分の配列をまとめてコピーして入力します。
+2. まず標的配列ごとに配列を入力します。Microhomology-Predictorは入力配列のちょうど真ん中に切断サイトがくるように入力しなければちゃんと使えません。野生型SpCas9を使う場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。したがって以下のような手順で入力配列を作っていきましょう。
+![](/images/3d.png)
+  1. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
+  ![](/images/3e.png)
+  2. 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
+    ![](/images/3f.png)
+    切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
+    ![](/images/3g.png)
+    切断面を登録するフィーチャーを尋ねられますので、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"を選択します。
+    ![](/images/3h.png)
+    フィーチャー設定画面がでてくるのでOKを押します。
+    完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
+    ![](/images/3i.png)
+  3. 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
+    ![](/images/3j.png)
+    5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
+    ![](/images/3k.png)
+    フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
+    ![](/images/3l.png)
+    フィーチャーが反映されます。
+  4. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
+    ![](/images/3m.png)
+    3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
+    ![](/images/3n.png)
+    フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
+    ![](/images/3o.png)
+    フィーチャーが反映されます。
+  5. "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
+  ![](/images/3p.png)
+  ![](/images/3q.png)
 
-標的配列が"ACCACCAGGCTACGAGCGGACGG"である場合の入力配列：
-atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
+標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
+cctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggcccct
 
+![](/images/3r.png)
+一つの配列を入力したら、"Add"をクリックして入力フォームを追加して、次の配列を入力します。
 
-標的配列が"TCGAACCACCAGGCTACGAGCGG"である場合の入力配列：
-atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
+標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
+cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
-![Fig-2]()
+![](/images/3s.png)
 
 3. Submitを押します。
-![Fig-2]()
+![](/images/3t.png)
 
-3. 結果が返ってきます。"Out-of-frame Score"を記録しておきましょう。
+4. 結果が返ってきます。フレームシフトに起こりやすさを示す"Out-of-frame Score"を記録しておきましょう。66を上回っていればノックアウト標的としては適していると考えられています。今回のケースではどちらの場合も条件を満たしているのでより詳しく見比べてみるのがよいでしょう。
+![](/images/3u.png)
 
-![Fig-2]()
+5. 配列をクリックすると、予測されるMMEJ欠失パターンが表示されます。変異パターンはその起こりやすさの順で並べられています。標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップに9塩基欠失というフレームイン型変異があり、一方で標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップ8までの変異が全てフレームシフト型の変異となっています。この結果では"ACCACCAGGCTACGAGCGGACGG"のほうがノックアウト標的としては適していそうです。
+![](/images/3v.png)
+![](/images/3w.png)
 
-4. それぞれの結果で"Out-of-frame Score"が高い方がフレームシフトを起こしやすいことが考えられるのでそちらを採用します。今回の場合はXXXです。
-![Fig-2]()
+補足ですが、標的の選定は変異パターンだけでなく、オフターゲット率なども含めて総合的に判断するのが理想的です。
+今回のようにどちらも"Out-of-frame Score"が66以上であるという場合はオフターゲット率や次に紹介する"inDelphi"のような別ツールでの判定結果を判断材料にしてもいいでしょう。
+各自の実験デザインに応じて判断していくのがよいのではないかと思います。
 
 #### [inDelphi](https://indelphi.giffordlab.mit.edu)
-- DSBによって引き起こされるインデル変異パターンを予測するツール
+- DSBによって引き起こされる一塩基挿入・欠失変異パターンを予測するツール
     - [http://www.rgenome.net/mich-calculator/](http://www.rgenome.net/mich-calculator/)
     - [論文](https://doi.org/10.1038/s41586-018-0686-x)
     ページ画面
-    ![Fig-1]()      
+    ![]()
     入力画面
-    ![Fig-2]()
+    ![]()
     予測される変異パターンのアライメント
-    ![fig-3]()
+    ![]()
     予測される変異パターンのヒストグラム
-    ![fig-4]()
+    ![]()
     過去データとの比較（予測結果の評価）
-    ![fig-5]()
+    ![]()
     予測変異パターンの一覧
-    ![fig-5]()
+    ![]()
 - "Comparison to predictions at 13,273,449 SpCas9 target sites in human exons and introns"の見方
-  ![Fig-2]()
+  ![]()
   - "Precision score"は変異の多様度予測したものとなります。この値が高いと細胞集団に対してゲノム編集した際に単一、もしくは少数の変異パターンに収束しやすいことを示します。もしこれが低いとモザイク度の高い編集となる可能性があります。
   - "Microhomology strength score"はマイクロホモロジー配列を介した変異が起こりやすいかどうかを示します。これが低い場合はNHEJ修復のようなマイクロホモロジー配列を介さないランダム性の高い変異が出現しやすくなると考えられます。
   - "Frameshift frequency"はインデルによるフレームシフトの起こりやすさを示します。
@@ -419,43 +450,48 @@ atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacct
 #### 【使用例】inDelphiを使って、ノックアウト結果を予測して標的を決定する
 
 1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"と"TCGAACCACCAGGCTACGAGCGG"を例にとって、どちらがノックアウトに相応しそうか調べてみます。
+![]()
 
 2. まず標的配列ごとに配列を入力します。inDelphiは切断面を境界として5´側、3´側配列を入力する必要があります。
   1. 具体的な手順としては次のようになります。
   2. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
+  ![]()
   3. "Features"->"Add Cleavage Site..."で切断面を記録します。切断面はSpCas9の場合はPAM結合サイトの5´末端から-3ntの部分となります。
+  ![]()
   4. 切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
+  ![]()
   5. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
+  ![]()
   6. "Left_reference"と"Right_reference"の部分をそれぞれ左側と右側のフォームに入力します。
+  ![]()
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"である場合の入力配列：
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-
+![]()
 
 標的配列が"TCGAACCACCAGGCTACGAGCGG"である場合の入力配列：
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-
-![Fig-2]()
+![]()
 
 2. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
+![]()
 
 3. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。
-![Fig-2]()
+![]()
 
 3. 自動的に予測が始まるのでしばらく待ちます。
-![Fig-2]()
+![]()
 
 3. 結果が返ってきます。"Frameshift frequency"を記録しておきましょう。
-
-![Fig-2]()
+![]()
 
 4. それぞれの結果で"Frameshift frequency"が高い方がフレームシフトを起こしやすいことが考えられるのでそちらを採用します。今回の場合はXXXです。
-![Fig-2]()
+![]()
 
 #### Microhomology-PredictorとinDelphiの使い分け
 まずHEK293Tなどのヒト培養細胞においてはinDelphiの予測はかなり正確であることが示されています。
-しかしながらinDelphiは機械学習ベースのツールであるため、学習対象にはなかった哺乳類以外の培養細胞、初代境内細胞、またin vivoでのゲノム編集ではその精度はかなり揺らぐのではないかと考えられます。
+しかしながらinDelphiは機械学習ベースのツールであるため、学習対象にはなかった哺乳類以外の培養細胞、初代境内細胞、またin vivoでのゲノム編集での精度は不明です。
 もちろん今後詳細な検証がなされていくかと思いますが、哺乳類以外の培養細胞、初代境内細胞、またin vivoでのゲノム編集では代わりにMicrohomology-Predictorのほうを活用してみてもよいかと思われます。
 またMicrohomology-PredictorはTALENやZFNでも利用できるので、TALENやZFNを扱う場合にはMicrohomology-Predictorのほうを使用すべきです。
 
