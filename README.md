@@ -106,7 +106,7 @@ s
 #### [CRISPRdirect](https://crispr.dbcls.jp)
 - CRISPR-Cas9標的を検索できるウェブツール。特にオフターゲット作用を考慮した検索が可能。
     - [https://crispr.dbcls.jp](https://crispr.dbcls.jp)
-    - [論文](https://doi.org/10.1093/bioinformatics/btu743)
+    - [論文リンク](https://doi.org/10.1093/bioinformatics/btu743)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2014.025)
     トップページ
     ![](/images/1a.png)      
@@ -215,7 +215,7 @@ FASMACのオリゴDNA注文画面
 #### [CRISPROR](http://crispor.tefor.net)
 - CRISPR-Cas9標的を検索できるウェブツール。標的検索だけでなく、そのオフターゲットの検索からプライマー設計までも含めた包括的な情報収集が可能。
     - [https://crispr.dbcls.jp](http://crispor.tefor.net)
-    - [論文](https://doi.org/10.1093/nar/gky354)
+    - [論文リンク](https://doi.org/10.1093/nar/gky354)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2021.023)
     トップページ
     ![](/images/2a.png)
@@ -340,7 +340,7 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 #### [Microhomology-Predictor](http://www.rgenome.net/mich-calculator/)
 - DSBによって引き起こされるMMEJによる欠失変異パターンを予測するツール
     - [http://www.rgenome.net/mich-calculator/](http://www.rgenome.net/mich-calculator/)
-    - [論文](http://dx.doi.org/10.1038/nmeth.3015)
+    - [論文リンク](http://dx.doi.org/10.1038/nmeth.3015)
     トップページ
     ![](/images/3a.png)
     入力画面
@@ -427,7 +427,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 #### [inDelphi](https://indelphi.giffordlab.mit.edu)
 - DSBによって引き起こされる一塩基挿入・欠失変異パターンを予測するツール
     - [https://indelphi.giffordlab.mit.edu](https://indelphi.giffordlab.mit.edu)
-    - [論文](https://doi.org/10.1038/s41586-018-0686-x)
+    - [論文リンク](https://doi.org/10.1038/s41586-018-0686-x)
     ページ画面
     ![](/images/4a.png)
     入力画面
@@ -591,7 +591,7 @@ MMEJ等を利用したノックインはホモロジーアームが20-40bpほど
 
 #### [PITCh designer 2.0](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
   - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
-  - [論文](https://doi.org/10.1080/21655979.2017.1313645)
+  - [論文リンク](https://doi.org/10.1080/21655979.2017.1313645)
 ![](/images/5a.png)
 
 入力例
