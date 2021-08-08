@@ -85,9 +85,8 @@ AJACSオンライン8
 |これから実験をする・したい|29 名|19.3 %|
 |公共データを活用する・したい|47 名|31.3 %|
 |大規模発現解析の予定はない|13 名|8.7 %|
+
 ---
-
-
 
 ## ゲノム編集とは？
 
@@ -370,7 +369,7 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 2. まず標的配列ごとに配列を入力します。Microhomology-Predictorは入力配列のちょうど真ん中に切断サイトがくるように入力しなければちゃんと使えません。野生型SpCas9を使う場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。したがって以下のような手順で入力配列を作っていきましょう。
 ![](/images/3d.png)
   1. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
-  ![](/images/3e.png)
+    ![](/images/3e.png)
   2. 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
     ![](/images/3f.png)
     切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
@@ -395,8 +394,8 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
     ![](/images/3o.png)
     フィーチャーが反映されます。
   5. "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
-  ![](/images/3p.png)
-  ![](/images/3q.png)
+    ![](/images/3p.png)
+    ![](/images/3q.png)
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
 cctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggcccct
@@ -423,24 +422,26 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 今回のようにどちらも"Out-of-frame Score"が66以上であるという場合はオフターゲット率や次に紹介する"inDelphi"のような別ツールでの判定結果を判断材料にしてもいいでしょう。
 各自の実験デザインに応じて判断していくのがよいのではないかと思います。
 
+----
+
 #### [inDelphi](https://indelphi.giffordlab.mit.edu)
 - DSBによって引き起こされる一塩基挿入・欠失変異パターンを予測するツール
-    - [http://www.rgenome.net/mich-calculator/](http://www.rgenome.net/mich-calculator/)
+    - [https://indelphi.giffordlab.mit.edu](https://indelphi.giffordlab.mit.edu)
     - [論文](https://doi.org/10.1038/s41586-018-0686-x)
     ページ画面
-    ![]()
+    ![](/images/4a.png)
     入力画面
-    ![]()
+    ![](/images/4b.png)
     予測される変異パターンのアライメント
-    ![]()
+    ![](/images/4c.png)
     予測される変異パターンのヒストグラム
-    ![]()
+    ![](/images/4d.png)
     過去データとの比較（予測結果の評価）
-    ![]()
+    ![](/images/4e.png)
     予測変異パターンの一覧
-    ![]()
+    ![](/images/4f.png)
 - "Comparison to predictions at 13,273,449 SpCas9 target sites in human exons and introns"の見方
-  ![]()
+  ![](/images/4e.png)
   - "Precision score"は変異の多様度予測したものとなります。この値が高いと細胞集団に対してゲノム編集した際に単一、もしくは少数の変異パターンに収束しやすいことを示します。もしこれが低いとモザイク度の高い編集となる可能性があります。
   - "Microhomology strength score"はマイクロホモロジー配列を介した変異が起こりやすいかどうかを示します。これが低い場合はNHEJ修復のようなマイクロホモロジー配列を介さないランダム性の高い変異が出現しやすくなると考えられます。
   - "Frameshift frequency"はインデルによるフレームシフトの起こりやすさを示します。
@@ -449,51 +450,105 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
 #### 【使用例】inDelphiを使って、ノックアウト結果を予測して標的を決定する
 
-1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"と"TCGAACCACCAGGCTACGAGCGG"を例にとって、どちらがノックアウトに相応しそうか調べてみます。
-![]()
+1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"（No.1：ピンク色）と"TCGAACCACCAGGCTACGAGCGG"（No.2：緑色）を例にとって、どちらがノックアウトに相応しそうか調べてみます。
+![](/images/3c.png)
 
-2. まず標的配列ごとに配列を入力します。inDelphiは切断面を境界として5´側、3´側配列を入力する必要があります。
-  1. 具体的な手順としては次のようになります。
-  2. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
-  ![]()
-  3. "Features"->"Add Cleavage Site..."で切断面を記録します。切断面はSpCas9の場合はPAM結合サイトの5´末端から-3ntの部分となります。
-  ![]()
-  4. 切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
-  ![]()
-  5. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
-  ![]()
-  6. "Left_reference"と"Right_reference"の部分をそれぞれ左側と右側のフォームに入力します。
-  ![]()
+2. 標的配列ごとに配列を入力します。inDelphiは切断面を境界として5´側、3´側配列（各40bp程度を推奨）を入力する必要があります。
+  1. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
+    ![](/images/3e.png)
+  2. 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
+    ![](/images/3f.png)
+    切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
+    ![](/images/3g.png)
+    切断面を登録するフィーチャーを尋ねられますので、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"を選択します。
+    ![](/images/3h.png)
+    フィーチャー設定画面がでてくるのでOKを押します。
+    完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
+    ![](/images/3i.png)
+  3. 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
+    ![](/images/3j.png)
+    5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
+    ![](/images/3k.png)
+    フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
+    ![](/images/3l.png)
+    フィーチャーが反映されます。
+  4. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
+    ![](/images/3m.png)
+    3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
+    ![](/images/3n.png)
+    フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
+    ![](/images/3o.png)
+    フィーチャーが反映されます。
+  5. "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
+    ![](/images/3p.png)
+    ![](/images/3q.png)
 
-標的配列が"ACCACCAGGCTACGAGCGGACGG"である場合の入力配列：
-atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-![]()
+標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
+左側フォーム：cctgtccacctccagggcttcgaaccaccaggctacgagc
+右側フォーム：ggacggagctcaccctgagccccgaggccccagggcccct
+![](/images/4g.png)
 
-標的配列が"TCGAACCACCAGGCTACGAGCGG"である場合の入力配列：
-atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
-![]()
+標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
+左側フォーム：cctgcctgtccacctccagggcttcgaaccaccaggctac
+右側フォーム：gagcggacggagctcaccctgagccccgaggccccagggc
+![](/images/4h.png)
 
 2. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
-![]()
+![](/images/4i.png)
 
-3. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。
-![]()
+3. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
+![](/images/4j.png)
 
-3. 自動的に予測が始まるのでしばらく待ちます。
-![]()
+4. 自動的に予測が始まるのでしばらく待ちます。
+![](/images/4k.png)
 
-3. 結果が返ってきます。"Frameshift frequency"を記録しておきましょう。
-![]()
+5. 結果が返ってきます。モザイク度を示す"Precision score"とフレームシフト発生率を示す"Frameshift frequency"に着目してみましょう。
 
-4. それぞれの結果で"Frameshift frequency"が高い方がフレームシフトを起こしやすいことが考えられるのでそちらを採用します。今回の場合はXXXです。
-![]()
+  - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
+    ![](/images/4l.png)
+    Precision score：0.48（high）
+    Frameshift frequency：72.9%（typical）
 
-#### Microhomology-PredictorとinDelphiの使い分け
-まずHEK293Tなどのヒト培養細胞においてはinDelphiの予測はかなり正確であることが示されています。
+  - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
+    ![](/images/4o.png)
+    Precision score：0.37（typical）
+    Frameshift frequency：85.3%（high）
+  
+  この結果をみるとどちらも極端な値の違いはありませんが、どちらかといえば"ACCACCAGGCTACGAGCGGACGG"でモザイク度が低く、一方で"TCGAACCACCAGGCTACGAGCGG"ではフレームシフト率が高いといえます。
+
+6. 予測される変異パターンをみてみましょう。
+
+  - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
+  ![](/images/4n.png)
+
+  - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
+  ![](/images/4m.png)
+
+  これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12%となっています。
+
+7. この情報からどちらの標的を選ぶことを考えます。もし実験の目的が「1塩基挿入したフレームシフト変異のクローン株を数個取得したい」という場合は、モザイク性が低く1塩基挿入率が21.1%の標的"ACCACCAGGCTACGAGCGGACGG"と選ぶといいでしょう。一方で「変異パターンに拘らずフレームシフトした細胞を大量に得たい」という場合は、フレームシフト率が高い標的"TCGAACCACCAGGCTACGAGCGG"を選ぶ方がいいように考えられます。
+
+もちろんこの指標では、そもそも変異導入率がどの程度なのかといった点やオフターゲットの多寡といった点をケアできていないのでそれらは別途調べる必要があります。
+変異導入率については、HEK293の場合は実際に実験をしてみてヘテロ二本鎖移動度分析（HMA：Heteroduplex Mobility Assay)等で大まかな導入率を確認してみてもいいかもしれません。
+こういったツールによる変異パターン予測とHMA（あるいは後述するTIDE解析）の結果を組み合わせることで、「全細胞のうちどれほどの細胞に変異が導入されるか？ そして導入された細胞の何%がどういった変異パターンをもつか」ということを概算することができます。
+この情報は「特定の変異クローン株を取得する際にどれほどの手間がかかりそうか」といったことを把握できるようになるため、スムーズな実験スケジュールの策定に役立つと考えられます。
+
+#### Microhomology-PredictorとinDelphiの使い分けや両ツールの注意点
+
+Microhomology-PredictorとinDelphiの使い分けに関してですが、まずHEK293などのヒト培養細胞においてはinDelphiの予測はかなり正確であることが示されています。
 しかしながらinDelphiは機械学習ベースのツールであるため、学習対象にはなかった哺乳類以外の培養細胞、初代境内細胞、またin vivoでのゲノム編集での精度は不明です。
 もちろん今後詳細な検証がなされていくかと思いますが、哺乳類以外の培養細胞、初代境内細胞、またin vivoでのゲノム編集では代わりにMicrohomology-Predictorのほうを活用してみてもよいかと思われます。
 またMicrohomology-PredictorはTALENやZFNでも利用できるので、TALENやZFNを扱う場合にはMicrohomology-Predictorのほうを使用すべきです。
+
+そしてこういった変異パターン予測ツールでの注意点としては、変異導入による毒性バイアスは考慮できないという点があります。
+遺伝子座によってはフレームシフトを導入することで細胞の生存や増殖に大きな影響を与えてしまうケースがあり、そういったサンプルでは解析時のフレームシフト率が極端に低くなってしまいます。
+長期的な実験を行う際にそういった点を見落としていると大きな損失につながります。ゲノム編集する際には予備実験として編集した細胞集団のサブクローニング・TIDE解析を行うなどして、ちゃんとフレームシフト変異の取得が可能かを確認を行うのが無難でしょう。
+またこうした致死性等についてはデータベース上にヒントがある場合があります。たとえばヒト遺伝子だと[DepMap](https://depmap.org/portal/)等でGene essentialityの評価がでていますし、マウスでも[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)で胚性致死の確認等が可能です。その他[PubMed](https://pubmed.ncbi.nlm.nih.gov/)で遺伝子名を検索すればそういった類の情報が見つかる場合もあります。事前にインターネットを活用して十分にリサーチされることをお勧めします。
+[DepMap](https://depmap.org/portal/)
+![](/images/4p.png)
+[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)
+![](/images/4q.png)
 
 ##### 関連ツール
 - [SPROUT](https://zou-group.github.io/SPROUT)
