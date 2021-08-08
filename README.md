@@ -525,7 +525,7 @@ PAM配列：NGG
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
     ![](/images/4o.png)
 
-  これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12%となっています。
+  これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が>20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12.7%となっています。
 
 7. この情報からどちらの標的を選ぶことを考えます。もし実験の目的が「1塩基挿入したフレームシフト変異のクローン株を数個取得したい」という場合は、モザイク性が低く1塩基挿入率が21.1%の標的"ACCACCAGGCTACGAGCGGACGG"と選ぶといいでしょう。一方で「変異パターンに拘らずフレームシフトした細胞を大量に得たい」という場合は、フレームシフト率が高い標的"TCGAACCACCAGGCTACGAGCGG"を選ぶ方がいいように考えられます。
 
@@ -543,7 +543,7 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 
 そしてこういった変異パターン予測ツールでの注意点としては、変異導入による毒性バイアスは考慮できないという点があります。
 遺伝子座によってはフレームシフトを導入することで細胞の生存や増殖に大きな影響を与えてしまうケースがあり、そういったサンプルでは解析時のフレームシフト率が極端に低くなってしまいます。
-長期的な実験を行う際にそういった点を見落としていると大きな損失につながります。ゲノム編集する際には予備実験として編集した細胞集団のサブクローニング・TIDE解析を行うなどして、ちゃんとフレームシフト変異の取得が可能かを確認を行うのが無難でしょう。
+長期的な実験を行う際にそういった点を見落としていると大きな損失につながります。ゲノム編集する際には予備実験として編集した細胞集団のサブクローニング・TIDE解析を行うなどして、ちゃんとフレームシフト変異の取得ができるのか確認を行うのが無難でしょう。
 またこうした致死性等についてはデータベース上にヒントがある場合があります。たとえばヒト遺伝子だと[DepMap](https://depmap.org/portal/)等でGene essentialityの評価がでていますし、マウスでも[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)で胚性致死の確認等が可能です。その他[PubMed](https://pubmed.ncbi.nlm.nih.gov/)で遺伝子名を検索すればそういった類の情報が見つかる場合もあります。事前にインターネットを活用して十分にリサーチされることをお勧めします。
 
 - [DepMap](https://depmap.org/portal/)
@@ -563,14 +563,14 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 #### 応用的なゲノム編集について
 
 ゲノム編集でできることはDSBによるノックアウトだけではありません。
-ドナーを導入することで人工的な配列を挿入するノックインができますし、またDNAに対する脱アミノ酵素をニッカーぜ型Cas9に取り付けることで二本鎖切断を伴わない塩基置換（Base Editing）を実現できます。
-特に最近では、ニッカーぜ型Cas9と融合させた逆転写酵素を利用して置換やインデルを加える方法（Prime Editing）が開発されています。
-またこのようにCRISPR-Cas9、およびその派生技術が興隆する一方で、規制やライセンスの観点からZFNやTALENなども商業的に注目されています。
-他にもゲノム編集から広がってRNA編集にもCRISPRが利用されつつあります。CRISPR-Cas13はその代表例で、RNAiよりも優れたノックダウン効果を示しています。
+例えばDSB導入を同時にドナーDNAを導入することで人工的な配列を挿入するノックインができますし、またDNAに対する脱アミノ酵素をニッカーゼ型Cas9に取り付けることで二本鎖切断を伴わない塩基置換（Base Editing）を実現できます。
+さらに最近では、ニッカーゼ型Cas9と融合させた逆転写酵素を利用して置換やインデルを加える方法（Prime Editing）が開発されています。
+またこのようなCRISPR-Cas9、およびその派生技術が興隆する一方で、規制やライセンスの観点からZFNやTALENなども商業的に注目されています。
+他にもゲノム編集から広がってRNA編集にもCRISPRが利用されつつあります。CRISPR-Cas13はその代表例で、RNAiによるノックダウンよりも特異的なノックダウン効果を示しています。
 このように世界中でゲノム編集が使われるなかで、それらを解析する専用ツールやデータベースも開発されている状況です。
 本章ではこのようなツールの一部を紹介し、ゲノム編集についてより理解を深めていただければと思います。
 
-またこのようなツール・データベースに関しては演者が個人的にまとめていますので下記のQiitaのページをご参照いただければと思います。
+またこのようなツール・データベースに関しては演者が個人的にまとめていますので下記のQiitaのページをご参考にしていただけますと幸いです。
 
 ##### ゲノム編集のためのデータベース・ツール一覧
 
@@ -589,9 +589,53 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 MMEJ等を利用したノックインはホモロジーアームが20-40bpほどの相同配列（マイクロホモロジー）を取り付けるだけでドナーの作製ができるため、PCRによるアダプター付加のみでドナーを作製できます。
 これは500bp以上の配列をゲノムから取得する必要があるHRなどと比べると、簡便でなおかつさまざまな生物種で利用可能であることが示されています（マウス、カエル、藻類？、ヒト、ハムスター、魚）。
 
-#### PITCh designer 2.0
-![Fig-2]()
+#### [PITCh designer 2.0](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
+    - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
+    - [論文](https://doi.org/10.1080/21655979.2017.1313645)
+![](/images/5a.png)
+
 入力例
+
+nucleotide sequence：
+>ゲノム配列サンプル
+GTGACGTTTCAACACAGACCTGAGGGAGGGAGAGAGCCCCCAAGAGGAACACAGCACAGGCTCTGGAGTGGCGGCAGGAACCAGACCCCAGGGGGTACAT
+GGTCTCACTCAGGATCACACGGACAGGCTTGGAACCCACATCTGCCACCCACCCCTGAGGGGCCCAGGCCCTGGGGACTCACAGGACAGAGGGCTCCGGC
+AGCTTCGGGGAGGGGGTCGGGGTAATTCTGGCAAGACGGAGCTCCTTGGCCTGTGTGGAGAGGAGAAGGGGAGGAAGGGGCAGTTCCCTCGACTGGGCAG
+GGGCCTGGGCCTGGACCCGGCCCAACCCTCACTCACCTGAGTGGAGGTCCCTTCCAGCCAGGAGGAGGAAGCCGAGCGCTGCAGCCCAGCCCCAGGGGCT
+CCCTCCGCTGTCCGCCTTTCAGGGGGACCCAGGGCACCAGAACTCCCTGTCTTCAGGAGGCCAAAGCGCCTGGAGAAGGGGGCCTCTTCAAGCTGCTGGG
+AGAAGGAGGAGGTCTCAGTTAGAGAGAAAGGATCCCTCTTCTCAGACCTCAAGGGTTAGCCCCCAAAGGACTGCAACAAACTACAATTCCCATCAGCCCC
+CGGGGCAGGCACAGCCTAAAAAGGAAGCCGGTTGTCCAGGACGACTCTGGGAACTATAGTCTTCCCCCTATCTGCCCCTGCCAGAGGTTCACAGGCTGTA
+TGGAATCCCACCTCCGGGCCCTCCCAGCCTCACAGGACCTCTCAGGGCATCCACTCACCACGGGACTCTTAGGGCTGGGGTGCGGCGGGGAGGAGACGCC
+ATTGAGGGTTCTGGGTTCTGCAGGGGGTGGTTCTGTGATGTGGGAACACCGGGCAGGTCACAGAAGATGCCAGTTGCCTCTAGATTCAGAG
+
+Reading frame：
+Frame1
+
+Adjustment of reading frame：
+C-insertion method
+
+Knock-in cassette：
+User defined insert
+
+insert sequence：
+> User defined insert
+atggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtaaacggccacaagttcagcgtgtccggcgagg
+gcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccctgaccta
+cggcgtgcagtgcttcagccgctaccccgaccacatgaagcagcacgacttcttcaagtccgccatgcccgaaggctacgtccaggagcgcaccatcttc
+ttcaaggacgacggcaactacaagacccgcgccgaggtgaagttcgagggcgacaccctggtgaaccgcatcgagctgaagggcatcgacttcaaggagg
+acggcaacatcctggggcacaagctggagtacaactacaacagccacaacgtctatatcatggccgacaagcagaagaacggcatcaaggtgaacttcaa
+gatccgccacaacatcgaggacggcagcgtgcagctcgccgaccactaccagcagaacacccccatcggcgacggccccgtgctgctgcccgacaaccac
+tacctgagcacccagtccgccctgagcaaagaccccaacgagaagcgcgatcacatggtcctgctggagttcgtgaccgccgccgggatcactctcggca
+tggacgagctgtacaagtaa
+
+Length of left microhomology：
+40bp
+
+PAM sequence requirement：
+NGG
+
+Length of right microhomology：
+Human(Homosapiens)genome, GRCh38hg38(Dec,2013)
 
 ### Base Editorによる塩基編集設計ツール
 
