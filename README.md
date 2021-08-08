@@ -511,7 +511,7 @@ PAM配列：NGG
     Frameshift frequency：72.9%（typical）
 
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
-    ![](/images/4o.png)
+    ![](/images/4m.png)
     Precision score：0.37（typical）
     Frameshift frequency：85.3%（high）
   
@@ -520,10 +520,10 @@ PAM配列：NGG
 6. 予測される変異パターンをみてみましょう。
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
-  ![](/images/4n.png)
+    ![](/images/4n.png)
 
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
-  ![](/images/4m.png)
+    ![](/images/4o.png)
 
   これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12%となっています。
 
