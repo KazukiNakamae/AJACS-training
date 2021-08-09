@@ -986,7 +986,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 中前 和恭：nakamae@pt-bio.com
 
-![](/images/5p.png)
+![](/images/5p.jpg)
 
 
 ----
