@@ -130,7 +130,7 @@ AJACSオンライン8
 
 ゲノム編集実験では設計した後に変異検出も行う必要がありますのでアンプリコンシーケンスは知っていても損はないかと思います。
 
-本講義ではメインである一章では取り扱わない内容ですが、2章以降でこの辺りについて少し触れたいと思います。質問で詳しく聴いていただいても大丈夫です。
+本講義ではメインである１章では取り扱わない内容ですが、2章以降でこの辺りについて少し触れたいと思います。質問で詳しく聴いていただいても大丈夫です。
 
 ---
 
@@ -148,13 +148,13 @@ AJACSオンライン8
 
 しかしゲノム内の様々な標的を狙うことができるゲノム編集ツールですが、必ずしも完全ではなく、実験者が意図していない標的配列を切断するケースもあります。これをオフターゲットと呼んでいて、ゲノム編集の設計において最も懸念すべき要素の一つです。
 
-本講義ではそういったオフターゲットについて具体的な判断を述べながら説明していきたいと思います。
+本講義ではそういったオフターゲット等についても具体的な判断を述べながら説明していきたいと思います。
 
 
 重要用語とその説明をここにメモしておきましょう。
 
 - ゲノム編集：人工的な生体分子を使って配列特異的にゲノム配列を改変する技術
-- ノム編集ツール：ゲノム編集を行うために使われる生体分子（タンパク質・核酸分子）
+- ゲノム編集ツール：ゲノム編集を行うために使われる生体分子（タンパク質・核酸分子）
 - CRISPR-Cas9：ゲノム編集ツールの一つ。DNAを切断する"Cas9ヌクレアーゼ"と任意のゲノム配列を認識する"ガイドRNA"の複合体を使って生体内のゲノムDNAを配列特異的に切断することができる
   - プロトスペーサー：ガイドRNAの一部分。この部分を標的としたいゲノムに対して相補的に結合するように設計することで、CRISPR-Cas9は任意のゲノム配列を認識することができる。
   - PAM配列：Cas9ヌクレアーゼがもつDNA結合モチーフ。特定の配列モチーフがないとCas9ヌクレアーゼはDNA切断活性を発揮しない。ガイドRNAは自由に設計できるが、このPAM配列は変えることができないので、これがCRISPR-Cas9システムにおける制約となっている。
@@ -164,7 +164,7 @@ AJACSオンライン8
 - オンターゲット：実験者が意図している標的配列、またはそれに対する切断を指す。
 - オフターゲット：実験者が意図していない標的配列、またはそれに対する切断を指す。これによってランダムな表現型が導かれて正しくない考察に繋がってしまう可能性がある。あるいは治療や品種改良のうえではリスクとなり得るのでなるべく避けるように設計することが重要。
 
-
+---
 
 ## 1章. ゲノム編集を使ってノックアウトのための標的を設計する
 
@@ -191,6 +191,8 @@ AJACSオンライン8
   ![](/images/6c.png)
 
   - ノックアウトの結果、事前情報からでは想定できなかった転写・翻訳産物が出現するケースもあります。また設計上仕方なく損傷を与えてしまった遺伝子についても発現が変わってしまっている恐れがあります。実験後はゲノム配列の確認とともに、周辺遺伝子のqPCR、ddPCR、ウェスタンブロット等で発現レベルを確認することも必要に応じて検討してみてください。
+
+---
 
 #### [CRISPRdirect](https://crispr.dbcls.jp)
 - CRISPR-Cas9標的を検索できるウェブツール。特にオフターゲット作用を考慮した検索が可能。
@@ -237,7 +239,7 @@ AJACSオンライン8
 2. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
->MYOG
+\>MYOG
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
 ![](/images/1i.png)
 ![](/images/1j.png)
@@ -425,6 +427,8 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
   - 哺乳類を問わず多くの生物種でみられるのが切断末端間にある相同配列がつながるような欠失変異パターンです。これらはMMEJ/SSAなどといった修復経路によって引き起こされることが知られています（※ゲノム編集の分野ではまとめてMMEJによる修復と呼ばれることが多い）。
   - またヒト等の培養細胞では切断面がC|Cとなっていると一塩基欠失によりC一塩基になったり、切断面でPAM側に位置しない方のTがTTに変わるといったリピート型の挿入が発生しやすかったりすることが知られています(Allen et al. Nat Biotech 2019)[https://dx.doi.org/10.1038%2Fnbt.4317]。
   - このような変異パターンを事前に予測するためのツールを紹介します。
+
+---
 
 #### [Microhomology-Predictor](http://www.rgenome.net/mich-calculator/)
 - DSBによって引き起こされるMMEJによる欠失変異パターンを予測するツール
@@ -666,6 +670,8 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 [ゲノム編集系のバイオインフォマティクス](https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937)
 [https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937](https://qiita.com/KazukiNakamae/items/fa1c58351c1a8ce4c937)
 
+---
+
 ### CRISPR-Cas9によるノックイン設計ツール
 
 ゲノム編集におけるノックインには非常にさまざまなものが知られています。
@@ -726,6 +732,8 @@ NGG
 Length of right microhomology：
 Human(Homosapiens)genome, GRCh38hg38(Dec,2013)
 
+---
+
 ### Base Editorによる塩基編集設計ツール
 
 Base Editingに使う脱アミノ酵素をニッカーぜ型Cas9（Base Editor）には大きく分けて二つのタイプがあります。
@@ -760,6 +768,8 @@ BE（C to T）[Ref1]
 Base editing window：
 13 to 17
 
+---
+
 ### Base Editorによる塩基編集予測ツール
 
 結合したゲノム箇所に塩基置換を導入できるBase Editorですが、Window内の目的とは異なる位置にC塩基またはA塩基がある場合はその塩基も同時に置換してしまうケースがあります。また場合によってはCからGへの変換などマイナーな塩基置換を発生させることもあり、100%指向的に置換変異を入れられるわけではありません。
@@ -784,6 +794,8 @@ BE4, HEK293T
 Amino acid frame：
 Frame 2, + strand
 
+---
+
 ### Prime Editorによる小規模編集設計ツール
 
 逆転写酵素を利用したゲノム編集手法であるPrime Editingはインデル置換が入り混じった複雑な小規模変異を導入可能ですが、そのために使うプロトスペーサ配列（pegRNA spacer）や逆転写テンプレートとプライマー結合サイト（pegRNA extension）、そしてニック導入用のガイドRNAのプロトスペーサ配列（ngRNA spacer）など通常のCRISPR-Cas9による変異導入やBase Editorと比べると設計がやや複雑です。
@@ -807,6 +819,8 @@ ACTTCTAaCAGGAACCCCGCTTCTA
 
 ngRNA spacers：
 GACATCCCCCTACTTCTAaC
+
+---
 
 ### TALENによるノックアウト設計ツール
 
@@ -843,6 +857,8 @@ Require A, C, or G at position 1 (not a T)
 
 Expires：
 One hour
+
+---
 
 ### Cas13によるRNA編集設計ツール
 
@@ -887,6 +903,8 @@ CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることが�
   Gene name：
   S
 
+---
+
 ### サンガーシーケンスデータを使った変異分析ツール
 
 一般的なサンガーシーケンスで読み出せる配列は一種類であり、細胞集団に対して一斉にゲノム編集を行ったサンプル（ポピュレーションサンプル）のジェノタイピングを行う場合はサブクローニングを行う必要があります。
@@ -915,6 +933,8 @@ high_edit_GRK2_control.ab1
 
 Test Sample Chromatogram：
 high_edit_GRK2_experiment.ab1
+
+---
 
 ### アンプリコンシーケンシングデータを使った変異分析ツール
 
@@ -962,6 +982,8 @@ TIDE解析の結果はアンプリコンシーケンシングで検出できる�
 また、注意すべき点としては現状のTIDE解析とNGSによるアンプリコンシーケンシングは大規模インデル等を検出するのは困難です。
 しかしながらゲノム編集において数kbレベルの欠失が起こるケースは存在します。そのため慎重に実験を行うならTIDE解析・アンプリコンシーケンシングすると同時に広範囲でのgenomic PCRを行って大規模インデルが頻発していないか電気泳動レベルで確認してみたほうがよいでしょう。
 
+---
+
 ### UCSC genome browserでのCas9標的の確認
 
 UCSCの[UCSCのgenomue browser](http://genome-asia.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chrX%3A15560138%2D15602945&hgsid=755575216_IGRFL7TynL4QmxVwM5RdAIoGiB93)ではあらかじめCRISPR-Cas9標的のアノテーション（CRISPR Targets）が用意されています。
@@ -969,6 +991,8 @@ UCSCの[UCSCのgenomue browser](http://genome-asia.ucsc.edu/cgi-bin/hgTracks?db=
 また予測切断活性やオフターゲットも評価されており、このサイトだけでも十分な選定が可能となっています。
 
 ![](/images/5k.png)
+
+---
 
 ### ガイドRNA先行研究データベース
 
@@ -988,6 +1012,7 @@ Human(hg38)
 HUGO gene symbol：
 KRAS
 
+---
 
 ### template-freeゲノム編集データベース
 
@@ -1022,6 +1047,8 @@ Minimum consecutive first match in MH：
 
 ゲノム編集を支援するデータベース・ツールは非常に多く発表されていますが、現状はほとんどのものは海外製であり、データ管理という観点で懸念が全くないわけではありません。
 今回は最後に、安全なゲノム編集設計・解析・管理を行うための国産ツールとして「GGGenome」および「Genome Editing Cloud」が開発されていますのでこちらを最後に紹介しておきます。
+
+---
 
 ### [GGGenome](https://gggenome.dbcls.jp/ja/hg38/1/)（+パッケージ版）によるオフターゲット検索
   - [https://gggenome.dbcls.jp/ja/hg38/1/](https://gggenome.dbcls.jp/ja/hg38/1/)
@@ -1065,6 +1092,8 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 - [https://gggenome.retrieva.jp/](https://gggenome.retrieva.jp/)
 
 ![](/images/5o.png)
+
+---
 
 ### ゲノム編集専用データ基盤Genome Editing Cloud
 
