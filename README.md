@@ -834,8 +834,8 @@ high_edit_GRK2_experiment.ab1
 このような状況からゲノム編集解析に特化したアンプリコンシーケンス解析ツールが発表されています。
 これらを使うことでゲノム編集という文脈のなかで理解しやすいデータを得ることが可能です。
 
-#### CRISPResso2
-  - [CRISPResso2](http://shinyapps.datacurators.nl/tide/)
+#### [CRISPResso2](https://crispresso.pinellolab.partners.org/submission)
+  - [https://crispresso.pinellolab.partners.org/submission](https://crispresso.pinellolab.partners.org/submission)
   - [論文リンク](https://doi.org/10.1038/s41587-019-0032-3)
 ![](/images/5i.png)
 
@@ -884,12 +884,20 @@ UCSCの[UCSCのgenomue browser](http://genome-asia.ucsc.edu/cgi-bin/hgTracks?db=
 ### ガイドRNA先行研究データベース
 
 CRISPR-Cas9が発表されて早9年が経とうとしており、これまでさまざまなゲノム標的でCRISPR-Cas9が利用されていきました。
-こうした過去の実験データは徐々にデータベースとして収録されてきており、これを参考にポジコン標的等を選定することで効率的な実験デザインが可能となりそうです。
+こうした過去の実験データは徐々にデータベースとして収録されてきており、今後はこういったものを参考に標的を選定することで効率的な実験デザインが可能となりそうです。
 
-#### dbGuide
+#### [dbGuide](https://sgrnascorer.cancer.gov/dbguide/)
+  - [https://sgrnascorer.cancer.gov/dbguide/](https://sgrnascorer.cancer.gov/dbguide/)
+  - [論文リンク](https://doi.org/10.1093/nar/gkaa848)
+![](/images/5l.png)
 
-![Fig-2]()
 入力例
+
+Species：
+Human(hg38)
+
+HUGO gene symbol：
+KRAS
 
 
 ### template-freeゲノム編集データベース
@@ -897,41 +905,87 @@ CRISPR-Cas9が発表されて早9年が経とうとしており、これまで�
 SNP配列の構築はノックインで実現されることが多いですが、MMEJを介した指向性のある変異導入を行えばドナーテンプレートを導入することなく、単純なノックアウトでSNP構築が可能です。
 こうしたtemplate-freeな手法で構築可能なSNPはデータベース化されています。
 
-#### MHcut Browser
+#### [MHcut Browser](http://mhcut-browser.vhost38.genap.ca)
+  - [http://mhcut-browser.vhost38.genap.ca](http://mhcut-browser.vhost38.genap.ca)
+  - [論文リンク](https://doi.org/10.1038/s41467-019-12829-8)
+![](/images/5m.png)
 
-![Fig-2]()
 入力例
+
+DATASET：
+Cas9
+
+gene name, RS ID：
+KRAS
+
+Variant Location：
+intronic
+exonic
+intergenic
+utr
+
+Minimum consecutive first match in MH：
+3
 
 ----
 
 ## 3章. ゲノム編集情報の安全な設計・解析・管理ツール
 
 ゲノム編集を支援するデータベース・ツールは非常に多く発表されていますが、現状はほとんどのものは海外製であり、データ管理という観点で懸念が全くないわけではありません。
-安全なゲノム編集設計・解析・管理を行うための国産ツールとして「GGGenome」および「Genome Editing Cloud」が開発されていますのでこちらを最後に紹介しておきます。
+今回は最後に、安全なゲノム編集設計・解析・管理を行うための国産ツールとして「GGGenome」および「Genome Editing Cloud」が開発されていますのでこちらを最後に紹介しておきます。
 
-### GGGenome（+パッケージ版）によるオフターゲット検索
+### [GGGenome](https://gggenome.dbcls.jp/ja/hg38/1/)（+パッケージ版）によるオフターゲット検索
+  - [https://gggenome.dbcls.jp/ja/hg38/1/](https://gggenome.dbcls.jp/ja/hg38/1/)
+  - [統合TV](https://doi.org/10.7875/togotv.2018.170)
 
 DBCLSが運営している商用利用可能な高速配列検索サイトです。
-特定のゲノムを指定してミスマッチ・ギャップつきオフターゲットを検索することができます。
+特定のゲノムを指定してミスマッチ・ギャップつきオン/オフターゲットを検索することができます。
 ある程度であれば検索長の制約はないので、一般的なCRISPR-Cas9のみならず様々なゲノム編集ツールでも利用ができます。
+またVやRといった縮重塩基にも対応しているのでモチーフ検索等にも活用可能です。
 
-![Fig-2]()
+![](/images/5n.png)
+
 入力例
+
+- SpCas9（NGG-3´ PAM, プロトスペーサ 20 nt）向け
+
+  gtccgtggaccggcggcgggNgg
+
+  データベース：
+  Human genome, GRCh38/hg38 (Dec, 2013)
+
+  ミスマッチ/ギャップを許容：
+  1塩基まで
+
+  双方向を検索
+
+- AsCas12a（5´-TTTV PAM, プロトスペーサ 23 nt）向け
+
+  tttVcagacaagataaaggcagtgggg
+
+  データベース：
+  Human genome, GRCh38/hg38 (Dec, 2013)
+
+  ミスマッチ/ギャップを許容：
+  1塩基まで
+
+  双方向を検索
 
 またレトリバ社はGGGenomeのパッケージ版を販売しており、ローカルな環境で実行することができます。
 
-![Fig-2]()
-入力例
+- [https://gggenome.retrieva.jp/](https://gggenome.retrieva.jp/)
 
-### Genome Editing Cloudの紹介
+![](/images/5o.png)
+
+### ゲノム編集専用データ基盤Genome Editing Cloud
 
 プラチナバイオ・凸版印刷が開発しているゲノム編集専用データ基盤です。
-現在は商用利用可能なsgRNAの設計や活性予測、アンプリコンシーケンス解析機能を開発しており、解析データは凸版印刷のセキュアなクラウド内に保存することが可能です。
+現在は商用利用可能なsgRNAの設計や活性予測、アンプリコンシーケンス解析機能を開発しており、解析データは凸版印刷のセキュアなクラウド内に保存することが可能となっています。
 基本的に商業ベースのゲノム編集支援ツールを目指しており、要望に応じて機能拡充を行っていく予定です。
 現在はクローズなテストを行っていますが、ご利用にご興味ある方は以下のアドレスまでご連絡ください。
+中前 和恭：nakamae@pt-bio.com
 
-![Fig-2]()
-入力例
+![](/images/5p.png)
 
 ----
 
