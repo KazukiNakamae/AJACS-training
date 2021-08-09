@@ -581,7 +581,7 @@ Microhomology-PredictorとinDelphiの使い分けに関してですが、まずH
 
 ゲノム編集におけるノックインには非常にさまざまなものが知られています。
 ドナーDNAを導入するタイプのノックインでは基本的に特定のDSB修復経路を利用しており、何を利用するかはどういったドナーDNAを扱うかによります。
-たとえば相同組換え修復(HR)を利用する場合は500bp以上のホモロジーアームを両端に持たせる必要があります（Yao et al., 2017)[https://doi.org/10.1038/cr.2017.76]。
+たとえば相同組換え修復(HR)を利用する場合は500bp以上のホモロジーアームを両端に持たせる必要があります[Yao et al., 2017](https://doi.org/10.1038/cr.2017.76)。
 また、HDR/MMEJ/NHEJを利用する場合はドナーも直鎖化しておき、修復経路に応じた長さのホモロジーアームを持たせておく必要があります（HDR knock-in、HITI、SATI、PITCh）。
 さらに一本鎖DNAをドナーとして利用する場合もあり、この場合はSSTRという経路が利用されます(2 hit 2 oligo, long donor)。
 
@@ -597,7 +597,7 @@ MMEJ等を利用したノックインはホモロジーアームが20-40bpほど
 入力例
 
 nucleotide sequence：
->ゲノム配列サンプル
+\>ゲノム配列サンプル
 GTGACGTTTCAACACAGACCTGAGGGAGGGAGAGAGCCCCCAAGAGGAACACAGCACAGGCTCTGGAGTGGCGGCAGGAACCAGACCCCAGGGGGTACAT
 GGTCTCACTCAGGATCACACGGACAGGCTTGGAACCCACATCTGCCACCCACCCCTGAGGGGCCCAGGCCCTGGGGACTCACAGGACAGAGGGCTCCGGC
 AGCTTCGGGGAGGGGGTCGGGGTAATTCTGGCAAGACGGAGCTCCTTGGCCTGTGTGGAGAGGAGAAGGGGAGGAAGGGGCAGTTCCCTCGACTGGGCAG
@@ -618,7 +618,7 @@ Knock-in cassette：
 User defined insert
 
 insert sequence：
-> User defined insert
+\>User defined insert
 atggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtaaacggccacaagttcagcgtgtccggcgagg
 gcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccctgaccta
 cggcgtgcagtgcttcagccgctaccccgaccacatgaagcagcacgacttcttcaagtccgccatgcccgaaggctacgtccaggagcgcaccatcttc
@@ -640,59 +640,163 @@ Human(Homosapiens)genome, GRCh38hg38(Dec,2013)
 ### Base Editorによる塩基編集設計ツール
 
 Base Editingに使う脱アミノ酵素をニッカーぜ型Cas9（Base Editor）には大きく分けて二つのタイプがあります。
-シトシン（C）をチミン（T）に変換するシトシン型Base Editorとアデニン（A）をチミン（T）に変換するアデニン型Base Editorです。
+シトシン（C）をチミン（T）に変換するシトシン型Base Editorとアデニン（A）をグアニン（G）に変換するアデニン型Base Editorです。
 これらはCas9が結合したゲノムの特定の範囲（Windowと呼びます）に対して作用し、上記の置換を行います。
 WindowはBase Editorの種類によって違っており、以下のツールではそうしたWindowを考慮した上での標的配列設計を行うことができます。
 
-#### BE-Designer
-![Fig-2]()
+#### [BE-Designer](http://www.rgenome.net/be-designer/)
+  - [http://www.rgenome.net/be-designer/](http://www.rgenome.net/be-designer/)
+  - [論文リンク](https://doi.org/10.1186/s12859-018-2585-4)
+![](/images/5b.png)
+
 入力例
+
+PAM Type：
+SpCas9 from Streptococcus pyogenes: 5'-NGG-3'
+
+Target Genome：
+Vertebrates
+Homo sapiens (GRCh38/hg38) - Human
+
+Target Sequence：
+\>sample
+atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggc
+
+crRNA length：
+20
+
+Base editing type：
+BE（C to T）[Ref1]
+
+Base editing window：
+13 to 17
 
 ### Base Editorによる塩基編集予測ツール
 
 結合したゲノム箇所に塩基置換を導入できるBase Editorですが、Window内の目的とは異なる位置にC塩基またはA塩基がある場合はその塩基も同時に置換してしまうケースがあります。また場合によってはCからGへの変換などマイナーな塩基置換を発生させることもあり、100%指向的に置換変異を入れられるわけではありません。
 そのため過去のBase Editingデータを学習し、置換パターンを事前に予測するツールも開発されています。これを使うことで変異の指向性をある程度予想することが可能です。
 
-#### BE-Hive
-![Fig-2]()
+#### [BE-Hive](https://www.crisprbehive.design)
+  - [https://www.crisprbehive.design](https://www.crisprbehive.design)
+  - [論文リンク](https://doi.org/10.1016/j.cell.2020.05.037)
+![](/images/5c.png)
+
 入力例
+
+Target genomic DNA：
+gacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtcca
+
+CRISPR protospacer：
+aggaaccccgcttctatgat
+
+Base editor / cell type：
+BE4, HEK293T
+
+Amino acid frame：
+Frame 2, + strand
 
 ### Prime Editorによる小規模編集設計ツール
 
-逆転写酵素を利用したゲノム編集手法であるPrime Editingはインデル置換が入り混じった複雑な小規模変異を導入可能ですが、そのために使うプロトスペーサー配列や逆転写テンプレート（RT Template：RTT）、プライマー結合サイト（Primer Binding Site：PBS）、そしてニック導入用のガイドRNA（nicking gRNA：ngRNA）など通常のCRISPR-Cas9による変異導入やBase Editorと比べると設計がやや複雑です。
+逆転写酵素を利用したゲノム編集手法であるPrime Editingはインデル置換が入り混じった複雑な小規模変異を導入可能ですが、そのために使うプロトスペーサ配列（pegRNA spacer）や逆転写テンプレートとプライマー結合サイト（pegRNA extension）、そしてニック導入用のガイドRNAのプロトスペーサ配列（ngRNA spacer）など通常のCRISPR-Cas9による変異導入やBase Editorと比べると設計がやや複雑です。
 以下のツールではそのような設計の複雑さを解消するために配列の自動設計機能を提供しています。
 
-#### PrimeDesign
-![Fig-2]()
+#### [PrimeDesign](https://drugthatgene.pinellolab.partners.org)
+  - [https://drugthatgene.pinellolab.partners.org](https://drugthatgene.pinellolab.partners.org)
+  - [論文リンク](https://doi.org/10.1038/s41467-021-21337-7)
+![](/images/5d.png)
+
 入力例
+
+Input sequence（これだけ入力すれば他の入力は自動でサジェストされる）：
+atggagctgtatgagacatccccctacttcta(c/a)caggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggctt
+
+pegRNA spacers：
+CATCATAGAAGCGGGGTTCC
+
+pegRNA extensions：
+ACTTCTAaCAGGAACCCCGCTTCTA
+
+ngRNA spacers：
+GACATCCCCCTACTTCTAaC
 
 ### TALENによるノックアウト設計ツール
 
 TALENはCRISPR-Cas9と同様に任意の配列に結合させてDNA二本鎖切断による変異導入することが可能なゲノム編集ツールです。
-RNA-DNA結合のCRISPR-Cas9とは違い、タンパク質-DNA結合ですが、これをうまく設計するためのツールも開発されています。
+RNA-DNA結合のCRISPR-Cas9とは違って、TALENはタンパク質-DNA結合となっているので直感的ではありませんが、これをうまく設計するためのツールも開発されています。
 
-#### TAL Effector Nucleotide Targeter 2.0
-![Fig-2]()
+#### [TALEN Targeter (old version with design guidelines)](https://tale-nt.cac.cornell.edu/node/add/talen-old)
+  - [https://tale-nt.cac.cornell.edu/node/add/talen-old](https://tale-nt.cac.cornell.edu/node/add/talen-old)
+  - [論文リンク](https://doi.org/10.1093/nar/gks608)
+![](/images/5e.png)
+
 入力例
+
+Sequence：
+\>sample
+aacaagccttttccgaccccatggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacct
+
+Spacer
+Minimum Spacer Length：12
+Maximum Spacer Length：16
+
+Repeat Array
+Minimum Repeat Array Length：16
+Maximum Repeat Array Length：20
+
+Upstream Base：
+T only (Recommended)
+
+Options：
+Require C, G, or T at position 2 (not an A)
+Percent composition
+Do not allow sites to end in G
+Require A, C, or G at position 1 (not a T)
+
+Expires：
+One hour
 
 ### Cas13によるRNA編集設計ツール
 
-CRISPR-Cas13はRNA対して配列特異的な結合をすることができます。
+CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることができます。
 これによってRNAi以上の特異性でノックダウンを行えますが、その有効性は標的によってやや異なることが知られています。
-このツールではそういった有効性を予測しつつ標的配列の選定を行うことが可能です。
+このツールではその有効性を予測しつつ標的配列の選定を行うことが可能です。
 
-#### Cas13design
-![Fig-2]()
+#### [Cas13design](https://cas13design.nygenome.org)
+  - [https://cas13design.nygenome.org](https://cas13design.nygenome.org)
+  - [論文リンク](https://doi.org/10.1038/s41587-020-0456-9)
+![](/images/5f.png)
+
 入力例
 
-### ウイルスに対するゲノム編集設計データベース
+- オリジナルの配列を評価する場合
 
-昨今のコロナウイルスに代表されるように、RNAウイルスは科学者にとって大きな研究対象です。
-CRISPR-Cas13を使ってターゲティングする際にはウイルスゲノムを参照する必要がありますが、このサイトでは標的とすることが可能な配列のデータベースを公開しています。
+  Design custom gRNAsを選択
 
-#### COMBAT crRNA Repository
-![Fig-2]()
-入力例
+  Input Type：
+  Paste single target
+
+  target RNA sequence：
+  ggcggccacactgagggagaagcgcaggctcaagaaggtgaatgaggccttcgaggccctgaagagaagcaccctgctcaaccccaaccagcggctgcccaaggtggagatcctgcgcagtgccatccagtacatcgagcgcctccaggccctgctcagctccctcaaccaggagga
+
+- ヒトのトランスクリプトに対して一括設計する場合
+
+  Humanを選択
+  
+  Gene symbol：
+  MYOG
+  
+  Ensemble transcript ID（自動でサジェスト）：
+  ENST00000241651.4
+
+- RNAウイルス（SARS-Cov-2）に対して一括設計する場合
+
+  RNA virusを選択
+  
+  virus：
+  SARS-Cov-2
+
+  Gene name：
+  S
 
 ### サンガーシーケンスデータを使った変異分析ツール
 
@@ -701,29 +805,81 @@ CRISPR-Cas13を使ってターゲティングする際にはウイルスゲノ�
 TIDE解析はそうしたアプローチのもとでゲノム編集サンプルを解析する方法です。
 通常の考え方では、ゲノムPCR産物を直接サンガーシーケンスで読み出した場合は様々な配列のシグナルが混ざり合って、塩基配列として読み出すことができません。しかしTIDE解析では、こうした混合シグナルをコンピュータ上で分離することで、ゲノム編集の結果で生じた配列パターンを明らかにすることが可能です。
 
-#### TIDE
-![Fig-2]()
+#### [TIDE](http://shinyapps.datacurators.nl/tide/)
+  - [http://shinyapps.datacurators.nl/tide/](http://shinyapps.datacurators.nl/tide/)
+  - [論文リンク](https://doi.org/10.1093/nar/gku936)
+![](/images/5h.png)
+
+まず以下のリンクから使用するシーケンスファイルをダウンロードしてください。
+[ダウンロードリンク（自動）](https://ice.synthego.com/misc/ice_example_files.zip) from [ICE Analysis | SYNTHEGO](https://ice.synthego.com/#/)
+
 入力例
+
+Title plot：
+sample
+
+Guide sequence：
+TGTATGAGTCGAAGATCTCC
+
+Control Sample Chromatogram：
+high_edit_GRK2_control.ab1
+
+Test Sample Chromatogram：
+high_edit_GRK2_experiment.ab1
 
 ### アンプリコンシーケンシングデータを使った変異分析ツール
 
 ポピュレーションサンプルをアレルベースでのシーケンス解析するうえで最も高解像度な方法はアンプリコンシーケンスといえます。
-しかしながらこうした解析は必ずしもゲノム編集に特化した形になっておらず、また解析にもそれなりの知識を要します。
-そのためゲノム編集解析に特化したシーケンスデータ解析ツールが発表されています。
+こうしたシーケンスデータはマッピングを介した変異検出手法で解析されますが、こうした解析は必ずしもゲノム編集を前提としたデータ形式になっておらず、また解析自体にもそれなりの知識を要します。
+このような状況からゲノム編集解析に特化したアンプリコンシーケンス解析ツールが発表されています。
 これらを使うことでゲノム編集という文脈のなかで理解しやすいデータを得ることが可能です。
 
 #### CRISPResso2
-![Fig-2]()
+  - [CRISPResso2](http://shinyapps.datacurators.nl/tide/)
+  - [論文リンク](https://doi.org/10.1038/s41587-019-0032-3)
+![](/images/5i.png)
+
 入力例
+
+以下の三角ボタンをクリックすることで例示データを自動入力することができます。
+![](/images/5j.png)
+
+CRISPR-Cas9によるノックアウトサンプルの解析の場合は"NHEJ(Non-homologous end joining)"の入力パターンがあてはまります。
+
+Editing tool：
+Cas9
+
+Sequencing design：
+Paired end reads
+
+Fastq file R1：
+nhej.r1.fastq.gz
+
+Fastq file R2：
+nhej.r2.fastq.gz
+
+Amplicon：
+AATGTCCCCCAATGGGAAGTTCATCTGGCACTGCCCACAGGTGAGGAGGTCATGATCCCCTTCTGGAGCTCCCAACGGGCCGTGGTCTGGTTCATCATCTGTAAGAATGGCTTCAAGAGGCTCGGCTGTGGTT
+
+#### TIDEとアンプリコンシーケンシングの比較と注意点
+
+TIDEとアンプリコンシーケンシングはどちらも変異の定量解析ができるという点で似た方法です。そこでどちらの手法を使うべきか悩むこともあるかもしれません。
+TIDE解析の結果はアンプリコンシーケンシングで検出できる変異パターンと相関があることが示されており、コストという点ではNGSベースのアンプリコンシーケンシングよりも安価です。そのためTIDEはアンプリコンシーケンシングの簡易版ととらえてもいいかもしれません。
+ただし、TIDE解析はアンプリコンシーケンシングほどの解像度はないため、細胞集団の中にある稀な変異パターンを検出することはできません。また挿入・置換配列の解析を十分に行うことは難しいため、Base Editingや短い配列のノックイン等の解析には不向きです。
+よってTIDE解析の利用シーンとしては、ノックアウト実験に適した標的の選定やゲノム編集実験系の確認といったフェーズで利用するのに向いています。
+その一方でアンプリコンシーケンシングは高い解像度や短い配列挿入（ノックイン・予期しないベクターのバックボーンの挿入等）の検出もある程度は可能なので微小なオフターゲットの検出や変異パターンの厳密なプロファイリングに向いています。
+もちろんTIDE解析したものも論文用の変異解析データとして提出可能です。予算、実験系、検出したい変異パターン、安全性の要求度を考えながらどちらを行うかを判断するとよいかと思います。
+
+また、注意すべき点としては現状のTIDE解析とNGSによるアンプリコンシーケンシングは大規模インデル等を検出するのは困難です。
+しかしながらゲノム編集において数kbレベルの欠失が起こるケースは存在します。そのため慎重に実験を行うならTIDE解析・アンプリコンシーケンシングすると同時に広範囲でのgenomic PCRを行って大規模インデルが頻発していないか電気泳動レベルで確認してみたほうがよいでしょう。
 
 ### UCSC genome browserでのCas9標的の確認
 
-UCSCのgenomue browserではあらかじめCRISPR-Cas9標的のアノテーションが用意されています。
+UCSCの[UCSCのgenomue browser](http://genome-asia.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chrX%3A15560138%2D15602945&hgsid=755575216_IGRFL7TynL4QmxVwM5RdAIoGiB93)ではあらかじめCRISPR-Cas9標的のアノテーション（CRISPR Targets）が用意されています。
 これを参照することで標的可能な部位をおおよそ見積もることが可能です。
 また予測切断活性やオフターゲットも評価されており、このサイトだけでも十分な選定が可能となっています。
 
-![Fig-2]()
-入力例
+![](/images/5k.png)
 
 ### ガイドRNA先行研究データベース
 
