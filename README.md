@@ -778,11 +778,11 @@ Human(Homosapiens)genome, GRCh38hg38(Dec,2013)
 
 ### Base Editorによる塩基編集設計ツール
 
-Base Editingに使う脱アミノ酵素をニッカーぜ型Cas9（Base Editor）には大きく分けて二つのタイプがあります。
+Base Editingに使う脱アミノ酵素をニッカーゼ型Cas9（Base Editor）には大きく分けて二つのタイプがあります。
 
 シトシン（C）をチミン（T）に変換するシトシン型Base Editorとアデニン（A）をグアニン（G）に変換するアデニン型Base Editorです。
 
-これらはCas9が結合したゲノムの特定の範囲（Windowと呼びます）に対して作用し、上記の置換を行います。
+これらはニッカーゼ型Cas9が結合したゲノムの特定の範囲（Windowと呼びます）に対して作用し、上記の置換を行います。
 
 WindowはBase Editorの種類によって違っており、以下のツールではそうしたWindowを考慮した上での標的配列設計を行うことができます。
 
@@ -888,6 +888,8 @@ GACATCCCCCTACTTCTAaC
 TALENはCRISPR-Cas9と同様に任意の配列に結合させてDNA二本鎖切断による変異導入することが可能なゲノム編集ツールです。
 
 RNA-DNA結合のCRISPR-Cas9とは違って、TALENはタンパク質-DNA結合となっているので直感的ではありませんが、これをうまく設計するためのツールも開発されています。
+
+ちなみに[日本語での設計プロトコル](https://www.mls.sci.hiroshima-u.ac.jp/smg/genome_editing/documents/6-module.pdf)も広島大学が公開しているので併せてご参照いただければと思います。
 
 #### [TALEN Targeter (old version with design guidelines)](https://tale-nt.cac.cornell.edu/node/add/talen-old)
   - [https://tale-nt.cac.cornell.edu/node/add/talen-old](https://tale-nt.cac.cornell.edu/node/add/talen-old)
