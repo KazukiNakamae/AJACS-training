@@ -996,6 +996,7 @@ TIDE解析はそうしたアプローチのもとでゲノム編集サンプル�
 #### [TIDE](http://shinyapps.datacurators.nl/tide/)
   - [http://shinyapps.datacurators.nl/tide/](http://shinyapps.datacurators.nl/tide/)
   - [論文リンク](https://doi.org/10.1093/nar/gku936)
+  - [統合TV](https://doi.org/10.7875/togotv.2021.040)
 ![](/images/5h.png)
 
 まず以下のリンクから使用するシーケンスファイルをダウンロードしてください。
