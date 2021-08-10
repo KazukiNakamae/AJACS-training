@@ -239,13 +239,17 @@ AJACSオンライン8
 2. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
+
 \>MYOG
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
+
 ![](/images/1i.png)
 ![](/images/1j.png)
 
 3. Cas9のPAM配列を入力します。今回は最も一般的なSpCas9の"NGG"とします。
+
 PAM配列：NGG
+
 ![](/images/1k.png)
 
 4. 特異性を確認するゲノムを指定します。今回は最新のヒトゲノムリファレンスである"Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)"とします。
@@ -360,16 +364,24 @@ MYOG
 3. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
 入力配列：
+
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
+
 ![](/images/1i.png)
 ![](/images/2n.png)
 
 4. 特異性を確認するゲノム+SNPデータベースを指定します。今回は最新のヒトゲノムリファレンスである"Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar"とします。
-ゲノム+SNPデータベース：Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar
+
+ゲノム+SNPデータベース：
+
+Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar
+
 ![](/images/2o.png)
 
 5. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
+
 PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
+
 ![](/images/2p.png)
 
 6. "SUBMIT"をクリックします。
@@ -491,12 +503,14 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
     ![](/images/3q.png)
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
+
 cctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggcccct
 
 ![](/images/3r.png)
 一つの配列を入力したら、"Add"をクリックして入力フォームを追加して、次の配列を入力します。
 
 標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
+
 cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
 ![](/images/3s.png)
@@ -577,13 +591,19 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
     ![](/images/3q.png)
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
+
 左側フォーム：cctgtccacctccagggcttcgaaccaccaggctacgagc
+
 右側フォーム：ggacggagctcaccctgagccccgaggccccagggcccct
+
 ![](/images/4g.png)
 
 標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
+
 左側フォーム：cctgcctgtccacctccagggcttcgaaccaccaggctac
+
 右側フォーム：gagcggacggagctcaccctgagccccgaggccccagggc
+
 ![](/images/4h.png)
 
 2. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
@@ -613,9 +633,11 @@ PAM配列：NGG
 6. 予測される変異パターンをみてみましょう。
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
+
     ![](/images/4n.png)
 
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
+
     ![](/images/4o.png)
 
   これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が>20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12.7%となっています。
@@ -692,6 +714,7 @@ MMEJ等を利用したノックインはホモロジーアームが20-40bpほど
 入力例
 
 nucleotide sequence：
+
 \>ゲノム配列サンプル
 GTGACGTTTCAACACAGACCTGAGGGAGGGAGAGAGCCCCCAAGAGGAACACAGCACAGGCTCTGGAGTGGCGGCAGGAACCAGACCCCAGGGGGTACAT
 GGTCTCACTCAGGATCACACGGACAGGCTTGGAACCCACATCTGCCACCCACCCCTGAGGGGCCCAGGCCCTGGGGACTCACAGGACAGAGGGCTCCGGC
@@ -704,15 +727,19 @@ TGGAATCCCACCTCCGGGCCCTCCCAGCCTCACAGGACCTCTCAGGGCATCCACTCACCACGGGACTCTTAGGGCTGGGG
 ATTGAGGGTTCTGGGTTCTGCAGGGGGTGGTTCTGTGATGTGGGAACACCGGGCAGGTCACAGAAGATGCCAGTTGCCTCTAGATTCAGAG
 
 Reading frame：
+
 Frame1
 
 Adjustment of reading frame：
+
 C-insertion method
 
 Knock-in cassette：
+
 User defined insert
 
 insert sequence：
+
 \>User defined insert
 atggtgagcaagggcgaggagctgttcaccggggtggtgcccatcctggtcgagctggacggcgacgtaaacggccacaagttcagcgtgtccggcgagg
 gcgagggcgatgccacctacggcaagctgaccctgaagttcatctgcaccaccggcaagctgcccgtgccctggcccaccctcgtgaccaccctgaccta
@@ -724,12 +751,15 @@ tacctgagcacccagtccgccctgagcaaagaccccaacgagaagcgcgatcacatggtcctgctggagttcgtgaccgc
 tggacgagctgtacaagtaa
 
 Length of left microhomology：
+
 40bp
 
 PAM sequence requirement：
+
 NGG
 
 Length of right microhomology：
+
 Human(Homosapiens)genome, GRCh38hg38(Dec,2013)
 
 ---
@@ -749,23 +779,30 @@ WindowはBase Editorの種類によって違っており、以下のツールで
 入力例
 
 PAM Type：
+
 SpCas9 from Streptococcus pyogenes: 5'-NGG-3'
 
 Target Genome：
+
 Vertebrates
+
 Homo sapiens (GRCh38/hg38) - Human
 
 Target Sequence：
+
 \>sample
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggc
 
 crRNA length：
+
 20
 
 Base editing type：
+
 BE（C to T）[Ref1]
 
 Base editing window：
+
 13 to 17
 
 ---
@@ -783,15 +820,19 @@ Base editing window：
 入力例
 
 Target genomic DNA：
+
 gacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtcca
 
 CRISPR protospacer：
+
 aggaaccccgcttctatgat
 
 Base editor / cell type：
+
 BE4, HEK293T
 
 Amino acid frame：
+
 Frame 2, + strand
 
 ---
@@ -812,12 +853,15 @@ Input sequence（これだけ入力すれば他の入力は自動でサジェス
 atggagctgtatgagacatccccctacttcta(c/a)caggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggctt
 
 pegRNA spacers：
+
 CATCATAGAAGCGGGGTTCC
 
 pegRNA extensions：
+
 ACTTCTAaCAGGAACCCCGCTTCTA
 
 ngRNA spacers：
+
 GACATCCCCCTACTTCTAaC
 
 ---
@@ -835,27 +879,33 @@ RNA-DNA結合のCRISPR-Cas9とは違って、TALENはタンパク質-DNA結合�
 入力例
 
 Sequence：
+
 \>sample
 aacaagccttttccgaccccatggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacct
 
-Spacer
+Spacer：
+
 Minimum Spacer Length：12
 Maximum Spacer Length：16
 
-Repeat Array
+Repeat Array：
+
 Minimum Repeat Array Length：16
 Maximum Repeat Array Length：20
 
 Upstream Base：
+
 T only (Recommended)
 
 Options：
-Require C, G, or T at position 2 (not an A)
-Percent composition
-Do not allow sites to end in G
-Require A, C, or G at position 1 (not a T)
+
+- Require C, G, or T at position 2 (not an A)
+- Percent composition
+- Do not allow sites to end in G
+- Require A, C, or G at position 1 (not a T)
 
 Expires：
+
 One hour
 
 ---
@@ -878,9 +928,11 @@ CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることが�
   Design custom gRNAsを選択
 
   Input Type：
+
   Paste single target
 
   target RNA sequence：
+
   ggcggccacactgagggagaagcgcaggctcaagaaggtgaatgaggccttcgaggccctgaagagaagcaccctgctcaaccccaaccagcggctgcccaaggtggagatcctgcgcagtgccatccagtacatcgagcgcctccaggccctgctcagctccctcaaccaggagga
 
 - ヒトのトランスクリプトに対して一括設計する場合
@@ -888,9 +940,11 @@ CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることが�
   Humanを選択
   
   Gene symbol：
+
   MYOG
   
   Ensemble transcript ID（自動でサジェスト）：
+
   ENST00000241651.4
 
 - RNAウイルス（SARS-Cov-2）に対して一括設計する場合
@@ -898,9 +952,11 @@ CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることが�
   RNA virusを選択
   
   virus：
+
   SARS-Cov-2
 
   Gene name：
+
   S
 
 ---
@@ -923,15 +979,19 @@ TIDE解析はそうしたアプローチのもとでゲノム編集サンプル�
 入力例
 
 Title plot：
+
 sample
 
 Guide sequence：
+
 TGTATGAGTCGAAGATCTCC
 
 Control Sample Chromatogram：
+
 high_edit_GRK2_control.ab1
 
 Test Sample Chromatogram：
+
 high_edit_GRK2_experiment.ab1
 
 ---
@@ -956,18 +1016,23 @@ high_edit_GRK2_experiment.ab1
 CRISPR-Cas9によるノックアウトサンプルの解析の場合は"NHEJ(Non-homologous end joining)"の入力パターンがあてはまります。
 
 Editing tool：
+
 Cas9
 
 Sequencing design：
+
 Paired end reads
 
 Fastq file R1：
+
 nhej.r1.fastq.gz
 
 Fastq file R2：
+
 nhej.r2.fastq.gz
 
 Amplicon：
+
 AATGTCCCCCAATGGGAAGTTCATCTGGCACTGCCCACAGGTGAGGAGGTCATGATCCCCTTCTGGAGCTCCCAACGGGCCGTGGTCTGGTTCATCATCTGTAAGAATGGCTTCAAGAGGCTCGGCTGTGGTT
 
 #### TIDEとアンプリコンシーケンシングの比較と注意点
@@ -1007,9 +1072,11 @@ CRISPR-Cas9が発表されて早9年が経とうとしており、これまで�
 入力例
 
 Species：
+
 Human(hg38)
 
 HUGO gene symbol：
+
 KRAS
 
 ---
@@ -1027,18 +1094,22 @@ SNP配列の構築はノックインで実現されることが多いですが�
 入力例
 
 DATASET：
+
 Cas9
 
 gene name, RS ID：
+
 KRAS
 
 Variant Location：
+
 intronic
 exonic
 intergenic
 utr
 
 Minimum consecutive first match in MH：
+
 3
 
 ----
@@ -1068,24 +1139,28 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
   gtccgtggaccggcggcgggNgg
 
   データベース：
+
   Human genome, GRCh38/hg38 (Dec, 2013)
 
   ミスマッチ/ギャップを許容：
+
   1塩基まで
 
-  双方向を検索
+  双方向を検索にチェック
 
 - AsCas12a（5´-TTTV PAM, プロトスペーサ 23 nt）向け
 
   tttVcagacaagataaaggcagtgggg
 
   データベース：
+
   Human genome, GRCh38/hg38 (Dec, 2013)
 
   ミスマッチ/ギャップを許容：
+
   1塩基まで
 
-  双方向を検索
+  双方向を検索にチェック
 
 またレトリバ社はGGGenomeのパッケージ版を販売しており、ローカルな環境で実行することができます。
 
