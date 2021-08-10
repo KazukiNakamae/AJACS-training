@@ -402,7 +402,7 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 ![](/images/2t.png)
 ![](/images/2u.png)
 
-10. [pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド]（https://www.addgene.org/42230/）でガイドRNAを発現させたい場合は"U6 expression from an Addgene plasmid"の項目へ行き、"Select your Addgene plasmid:"で"pX330-U6-Chimeric_BB-CBh-hSpCas9(Zhang lab) + derivatives"を選択します。
+10. [pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド](https://www.addgene.org/42230/)でガイドRNAを発現させたい場合は"U6 expression from an Addgene plasmid"の項目へ行き、"Select your Addgene plasmid:"で"pX330-U6-Chimeric_BB-CBh-hSpCas9(Zhang lab) + derivatives"を選択します。
 ![](/images/2v.png)
 
 11. 配列が自動で更新されるので、更新された"Primers for gN20 guides"を記録します。
