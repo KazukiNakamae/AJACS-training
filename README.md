@@ -586,7 +586,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
     ![](/images/3o.png)
     フィーチャーが反映されます。
-  5. "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
+  5. "Left_reference"と"Right_reference"の部分をそれぞれドラッグして、配列をコピーします。そしてサイトの左側フォームと右側フォームに入力します。
     ![](/images/3p.png)
     ![](/images/3q.png)
 
