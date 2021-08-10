@@ -473,9 +473,9 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 
 2. まず標的配列ごとに配列を入力します。Microhomology-Predictorは入力配列のちょうど真ん中に切断サイトがくるように入力しなければちゃんと使えません。野生型SpCas9を使う場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。したがって以下のような手順で入力配列を作っていきましょう。
 ![](/images/3d.png)
-  1. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
+  - ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
     ![](/images/3e.png)
-  2. 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
+  - 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
     ![](/images/3f.png)
     切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
     ![](/images/3g.png)
@@ -484,21 +484,21 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
     フィーチャー設定画面がでてくるのでOKを押します。
     完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
     ![](/images/3i.png)
-  3. 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
+  - 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
     ![](/images/3j.png)
     5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
     ![](/images/3k.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
     ![](/images/3l.png)
     フィーチャーが反映されます。
-  4. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
+  - 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
     ![](/images/3m.png)
     3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
     ![](/images/3n.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
     ![](/images/3o.png)
     フィーチャーが反映されます。
-  5. "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
+  - "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
     ![](/images/3p.png)
     ![](/images/3q.png)
 
@@ -561,9 +561,9 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 ![](/images/3c.png)
 
 2. 標的配列ごとに配列を入力します。inDelphiは切断面を境界として5´側、3´側配列（各40bp程度を推奨）を入力する必要があります。
-  1. ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
+  - ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
     ![](/images/3e.png)
-  2. 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
+  - 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
     ![](/images/3f.png)
     切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
     ![](/images/3g.png)
@@ -572,21 +572,21 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
     フィーチャー設定画面がでてくるのでOKを押します。
     完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
     ![](/images/3i.png)
-  3. 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
+  - 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
     ![](/images/3j.png)
     5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
     ![](/images/3k.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
     ![](/images/3l.png)
     フィーチャーが反映されます。
-  4. 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
+  - 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
     ![](/images/3m.png)
     3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
     ![](/images/3n.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
     ![](/images/3o.png)
     フィーチャーが反映されます。
-  5. "Left_reference"と"Right_reference"の部分をそれぞれドラッグして、配列をコピーします。そしてサイトの左側フォームと右側フォームに入力します。
+  - "Left_reference"と"Right_reference"の部分をそれぞれドラッグして、配列をコピーします。そしてサイトの左側フォームと右側フォームに入力します。
     ![](/images/3p.png)
     ![](/images/3q.png)
 
@@ -606,17 +606,17 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
 ![](/images/4h.png)
 
-2. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
+3. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
 ![](/images/4i.png)
 
-3. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
+4. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
 ![](/images/4j.png)
 
-4. 自動的に予測が始まるのでしばらく待ちます。
+5. 自動的に予測が始まるのでしばらく待ちます。
 ![](/images/4k.png)
 
-5. 結果が返ってきます。モザイク度を示す"Precision score"とフレームシフト発生率を示す"Frameshift frequency"に着目してみましょう。
+6. 結果が返ってきます。モザイク度を示す"Precision score"とフレームシフト発生率を示す"Frameshift frequency"に着目してみましょう。
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
     ![](/images/4l.png)
@@ -630,7 +630,7 @@ PAM配列：NGG
   
   この結果をみるとどちらも極端な値の違いはありませんが、どちらかといえば"ACCACCAGGCTACGAGCGGACGG"でモザイク度が低く、一方で"TCGAACCACCAGGCTACGAGCGG"ではフレームシフト率が高いといえます。
 
-6. 予測される変異パターンをみてみましょう。
+7. 予測される変異パターンをみてみましょう。
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
 
@@ -642,7 +642,7 @@ PAM配列：NGG
 
   これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が>20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12.7%となっています。
 
-7. この情報からどちらの標的を選ぶことを考えます。もし実験の目的が「1塩基挿入したフレームシフト変異のクローン株を数個取得したい」という場合は、モザイク性が低く1塩基挿入率が21.1%の標的"ACCACCAGGCTACGAGCGGACGG"と選ぶといいでしょう。一方で「変異パターンに拘らずフレームシフトした細胞を大量に得たい」という場合は、フレームシフト率が高い標的"TCGAACCACCAGGCTACGAGCGG"を選ぶ方がいいように考えられます。
+8. この情報からどちらの標的を選ぶことを考えます。もし実験の目的が「1塩基挿入したフレームシフト変異のクローン株を数個取得したい」という場合は、モザイク性が低く1塩基挿入率が21.1%の標的"ACCACCAGGCTACGAGCGGACGG"と選ぶといいでしょう。一方で「変異パターンに拘らずフレームシフトした細胞を大量に得たい」という場合は、フレームシフト率が高い標的"TCGAACCACCAGGCTACGAGCGG"を選ぶ方がいいように考えられます。
 
 もちろんこの指標では、そもそも変異導入率がどの程度なのかといった点やオフターゲットの多寡といった点をケアできていないのでそれらは別途調べる必要があります。
 変異導入率については、HEK293の場合は実際に実験をしてみてヘテロ二本鎖移動度分析（HMA：Heteroduplex Mobility Assay)等で大まかな導入率を確認してみてもいいかもしれません。
