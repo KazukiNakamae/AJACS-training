@@ -532,7 +532,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 ----
 
 #### [inDelphi](https://indelphi.giffordlab.mit.edu)
-- DSBによって引き起こされる一塩基挿入・欠失変異パターンを予測するツール
+- CRIPSR-Cas9によるDSBによって引き起こされる一塩基挿入・欠失変異パターンを予測するツール
     - [https://indelphi.giffordlab.mit.edu](https://indelphi.giffordlab.mit.edu)
     - [論文リンク](https://doi.org/10.1038/s41586-018-0686-x)
     ページ画面
