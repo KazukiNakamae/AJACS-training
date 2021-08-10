@@ -521,7 +521,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 4. 結果が返ってきます。フレームシフトに起こりやすさを示す"Out-of-frame Score"を記録しておきましょう。66を上回っていればノックアウト標的としては適していると考えられています。今回のケースではどちらの場合も条件を満たしているのでより詳しく見比べてみるのがよいでしょう。
 ![](/images/3u.png)
 
-5. 配列をクリックすると、予測されるMMEJ欠失パターンが表示されます。変異パターンはその起こりやすさの順で並べられています。標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップに9塩基欠失というフレームイン型変異があり、一方で標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップ8までの変異が全てフレームシフト型の変異となっています。この結果では"ACCACCAGGCTACGAGCGGACGG"のほうがノックアウト標的としては適していそうです。
+5. 配列をクリックすると、予測されるMMEJ欠失パターンが表示されます。変異パターンはその起こりやすさの順で並べられています。標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップに9塩基欠失というフレームイン型変異があり、一方で標的"TCGAACCACCAGGCTACGAGCGG"の場合はトップ8までの変異が全てフレームシフト型の変異となっています。この結果では"TCGAACCACCAGGCTACGAGCGG"のほうがノックアウト標的としては適していそうです。
 ![](/images/3v.png)
 ![](/images/3w.png)
 
