@@ -391,11 +391,11 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 ![](/images/2r.png)
 
 8. 標的のリストが特異性が高い順に表示されます。ノックアウトする上では特異性が高く、なおかつ切断活性が低すぎず、フレームシフトが起こりやすい標的を選ぶのがベストです。
-  1. 今回は次の基準で選んでみます。
-  2. 特異性を示す"MIT Specificity Score"と"CFD Spec. score"がいずれも90を上回る
-  3. 切断活性を示す"Doench '16"と"Mor.-Mateos"がいずれも25を下回らない
-  4. フレームシフトの起こりやすさを示す"Out-of-Frame"と"Lindel"がいずれも60を上回る
-  - これを満たすのは"ACCACCAGGCTACGAGCGGA CGG"、"TCGAACCACCAGGCTACGAG CGG"の二標的となります。どちらでもよいですが今回は"ACCACCAGGCTACGAGCGGA CGG"を選んでみます。
+  - 今回は次の基準で選んでみます。
+  - 特異性を示す"MIT Specificity Score"と"CFD Spec. score"がいずれも90を上回る
+  - 切断活性を示す"Doench '16"と"Mor.-Mateos"がいずれも25を下回らない
+  - フレームシフトの起こりやすさを示す"Out-of-Frame"と"Lindel"がいずれも60を上回る
+    - これを満たすのは"ACCACCAGGCTACGAGCGGA CGG"、"TCGAACCACCAGGCTACGAG CGG"の二標的となります。どちらでもよいですが今回は"ACCACCAGGCTACGAGCGGA CGG"を選んでみます。
 ![](/images/2s.png)
 
 9. "Cloning / PCR primers"をクリックして、構築に必要なオリゴヌクレオチド情報を表示します。
