@@ -1,5 +1,13 @@
 # AJACSオンライン8 「ウェブツールを使ってゲノム編集の標的サイトを検索する」
 
+PDFの資料を参照されている方へ
+
+講義資料はリンク先のウェブページを元にしています。ウェブページでは画像なども交えていますのでこちらを参照されながら受講いただけますと幸いです。
+
+講義資料リンク：[https://github.com/KazukiNakamae/AJACS-training](https://github.com/KazukiNakamae/AJACS-training)
+
+----
+
 プラチナバイオ株式会社 兼
 広島大学 ゲノム編集イノベーションセンター   
 [中前和恭](https://researchmap.jp/knakamae)  
@@ -50,22 +58,25 @@ AJACSオンライン8
     - MMEJ-predictor
     - InDelphi
 
-- 2章. より詳しいゲノム編集のためにデータベース・ツールを知る
-  - ゲノム編集ウェブツール一覧
-  - Cas9によるノックイン設計ツール：PITCh designer 2.0
-  - TALENによるノックアウト設計ツール：TAL Effector Nucleotide Targeter 2.0
+- 2章. より応用的なゲノム編集のためのデータベース・ツールを知る
+  - ゲノム編集のためのデータベース・ツール一覧
+  - CRISPR-Cas9によるノックイン設計ツール：PITCh designer 2.0
+  - TALENによるノックアウト設計ツール：TALEN Targeter
   - Base Editorによる塩基編集設計ツール：BE-Designer
   - Base Editorによる塩基編集予測ツール：BE-Hive
   - Prime Editorによる小規模編集設計ツール：PrimeDesign
   - Cas13によるRNA編集設計ツール：Cas13design
   - サンガーシーケンスデータを使った変異分析ツール：TIDE
   - アンプリコンシーケンシングデータを使った変異分析ツール：CRISPResso2
-  - UCSC genome browserを使ったCas9標的の検索
+  - UCSC genome browserでのCas9標的の確認
   - ガイドRNA先行研究データベース：dbGuide
-  - MMEJサイト検索データベース：MHcut Browser
+  - template-freeゲノム編集データベース：MHcut Browser
 - 3章. ゲノム編集情報の安全な設計・解析・管理ツール
   - GGGenome（+パッケージ版）によるオフターゲット検索
-  - Genome Editing Cloudの紹介
+  - ゲノム編集専用データ基盤Genome Editing Cloud
+- 0章. 補遺
+  - NCBIから遺伝子の配列情報を取得する
+  - SnapGeneViewerで配列情報をわかりやすく表示する
 
 ## 講義に際して
 - 今回はウェブツールを紹介しますが、同時にアクセスするとサイトにつながりにくくなる可能性があります。私自身はスムーズな進行のために資料のスクリーンショットを追っていく形式で説明していきます。受講者の方は説明を聴きながら実際に手を動かしてもらっても大丈夫ですし、ただ聴いてもらうだけでも構いません。
@@ -76,7 +87,7 @@ AJACSオンライン8
 
 #### 受講前アンケートにご協力いただき、ありがとうございます (回答数 184名)(8/3時点)
 
-|受講申込者の専門分野|人数|割合|
+|受講申込者の専門分野|人数|
 |:--|--:|
 |生物科学|60 名|
 |基礎医学|41 名|
@@ -1237,7 +1248,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 補遺ではデモ資料で用意した配列情報を取得した流れを説明します。
 
-### NCBI等から遺伝子の配列情報を取得する
+### NCBIから遺伝子の配列情報を取得する
 
 1.	まずウェブ検索でアメリカ国立生物工学情報センター（NCBI）へアクセスする。
  
@@ -1286,3 +1297,6 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 11.	"Sequence"をクリックすると以下のようになる。小豆色の線の上に表示されているのが該当するDNA二重鎖配列となっている。
 
 ![](/images/7k.png)
+
+※ちなみに無料版の"SnapGene Viewer"では配列の編集ができません。編集する場合は有償版である"SnapGene"を利用するか"[Serial Cloner](http://serialbasics.free.fr/Serial_Cloner.html)"のような別ソフトを併用されるとよいでしょう。
+
