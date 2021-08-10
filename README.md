@@ -703,14 +703,20 @@ Microhomology-PredictorとinDelphiの使い分けに関してはよくわから�
 ### CRISPR-Cas9によるノックイン設計ツール
 
 ゲノム編集におけるノックインには非常にさまざまなものが知られています。
+
 ドナーDNAを導入するタイプのノックインでは基本的に特定のDSB修復経路を利用しており、何を利用するかはどういったドナーDNAを扱うかによります。
+
 たとえば相同組換え修復(HR)を利用する場合は500bp以上のホモロジーアームを両端に持たせる必要があります([Yao et al., 2017](https://doi.org/10.1038/cr.2017.76))。
+
 また、HDR/MMEJ/NHEJを利用する場合はドナーも直鎖化しておき、修復経路に応じた長さのホモロジーアームを持たせておく必要があります（[Nakade et al., 2014](https://doi.org/10.1038/ncomms6560)、[Chu et al., 2015](https://doi.org/10.1038/nbt.3198),[Suzuki et al., 2016](https://dx.doi.org/10.1038%2Fnature20565)、[Yao et al., 2017](https://doi.org/10.1038/cr.2017.76)、[Suzuki et al., 2019](https://doi.org/10.1038/s41422-019-0213-0)）。
+
 さらに一本鎖DNAをドナーとして利用する場合もあり、この場合は主にSSTRという経路が利用されます([Radecke et al., 2010](https://dx.doi.org/10.1038%2Fmt.2009.304), [Yoshimi et al., 2016](https://doi.org/10.1038/ncomms10431))。
 
 今回はMMEJ等を利用したノックイン（PITCh法）の設計ツールを紹介します。
+
 MMEJ等を利用したノックインはホモロジーアームが20-40bpほどの相同配列（マイクロホモロジー）を取り付けるだけでドナーの作製ができるため、PCRによるアダプター付加のみでドナーを作製できます。
-これは500bp以上の配列をゲノムから取得する必要があるHRなどと比べると、簡便でなおかつさまざまな生物種で利用可能であることが示されています（マウス、カエル、藻類？、ヒト、ハムスター、魚）。
+
+これは500bp以上の配列をゲノムから取得する必要があるHRなどと比べると、簡便でなおかつさまざまな生物種で利用可能であることが示されています（[リンク参照](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/about.html)）。
 
 #### [PITCh designer 2.0](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
   - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
