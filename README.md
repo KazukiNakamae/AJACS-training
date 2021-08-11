@@ -327,7 +327,7 @@ FASMACのオリゴDNA注文画面
 
 #### [CRISPROR](http://crispor.tefor.net)
 - CRISPR-Cas9標的を検索できるウェブツール。標的検索だけでなく、そのオフターゲットの検索からプライマー設計までも含めた包括的な情報収集が可能。
-    - [https://crispr.dbcls.jp](http://crispor.tefor.net)
+    - [http://crispor.tefor.net](http://crispor.tefor.net)
     - [論文リンク](https://doi.org/10.1093/nar/gky354)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2021.023)
     トップページ
@@ -628,7 +628,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 PAM配列：NGG
 ![](/images/4i.png)
 
-4. "HCT116", "HEK293", "K562", "U2OS"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
+4. "HCT116", "HEK293", "K562", "U2OS", "mESC"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
 ![](/images/4j.png)
 
 5. 自動的に予測が始まるのでしばらく待ちます。
@@ -726,7 +726,7 @@ Microhomology-PredictorとinDelphiの使い分けに関してはよくわから�
 
 たとえば相同組換え修復(HR)を利用する場合は500bp以上のホモロジーアームを両端に持たせる必要があります([Yao et al., 2017](https://doi.org/10.1038/cr.2017.76))。
 
-また、HDR/MMEJ/NHEJを利用する場合はドナーも直鎖化しておき、修復経路に応じた長さのホモロジーアームを持たせておく必要があります（[Nakade et al., 2014](https://doi.org/10.1038/ncomms6560)、[Chu et al., 2015](https://doi.org/10.1038/nbt.3198),[Suzuki et al., 2016](https://dx.doi.org/10.1038%2Fnature20565)、[Yao et al., 2017](https://doi.org/10.1038/cr.2017.76)、[Suzuki et al., 2019](https://doi.org/10.1038/s41422-019-0213-0)）。
+また、HDR/MMEJ/NHEJを利用する場合はドナーも直鎖化しておき、修復経路に応じた長さのホモロジーアームを持たせておく必要があります（[Nakade et al., 2014](https://doi.org/10.1038/ncomms6560)、[Chu et al., 2015](https://doi.org/10.1038/nbt.3198)、[Suzuki et al., 2016](https://dx.doi.org/10.1038%2Fnature20565)、[Yao et al., 2017](https://doi.org/10.1038/cr.2017.76)、[Suzuki et al., 2019](https://doi.org/10.1038/s41422-019-0213-0)）。
 
 さらに一本鎖DNAをドナーとして利用する場合もあり、この場合は主にSSTRという経路が利用されます([Radecke et al., 2010](https://dx.doi.org/10.1038%2Fmt.2009.304), [Yoshimi et al., 2016](https://doi.org/10.1038/ncomms10431))。
 
