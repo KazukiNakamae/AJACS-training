@@ -2,7 +2,7 @@
 
 PDFの資料を参照されている方へ
 
-講義資料はリンク先のウェブページを元にしています。ウェブページでは画像なども交えていますのでこちらを参照されながら受講いただくことをオススメいたします。。
+講義資料はリンク先のウェブページを元にしています。ウェブページでは画像なども交えていますのでこちらを参照されながら受講いただくことをオススメいたします。
 
 講義資料リンク：[https://github.com/KazukiNakamae/AJACS-training](https://github.com/KazukiNakamae/AJACS-training)
 
@@ -10,7 +10,7 @@ PDFの資料を参照されている方へ
 
 プラチナバイオ株式会社 兼
 広島大学 ゲノム編集イノベーションセンター   
-[中前和恭](https://researchmap.jp/knakamae)  
+[中前和恭](https://researchmap.jp/knakamae)
 nakamae@pt-bio.com
 2021年8月19日（木）
 AJACSオンライン8
@@ -444,7 +444,7 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 ##### 関連ツール
 - [CHOPCHOP](https://chopchop.cbu.uib.no)
   - Exonを参照しながらインタラクティブに標的を検索できるツール。
-  - (統合TV)[https://doi.org/10.7875/togotv.2020.083]
+  - [統合TV](https://doi.org/10.7875/togotv.2020.083)
 
 ----
 
@@ -1015,6 +1015,7 @@ TIDE解析はそうしたアプローチのもとでゲノム編集サンプル�
   - [http://shinyapps.datacurators.nl/tide/](http://shinyapps.datacurators.nl/tide/)
   - [論文リンク](https://doi.org/10.1093/nar/gku936)
   - [統合TV](https://doi.org/10.7875/togotv.2021.040)
+
 ![](/images/5h.png)
 
 まず以下のリンクから使用するシーケンスファイルをダウンロードしてください。
@@ -1234,7 +1235,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 ### ゲノム編集専用データ基盤Genome Editing Cloud
 
-プラチナバイオ・凸版印刷が開発しているゲノム編集専用データ基盤です。
+プラチナバイオ・凸版印刷・広島大学が開発しているゲノム編集専用データ基盤です。
 
 現在は商用利用可能なsgRNAの設計や活性予測、アンプリコンシーケンス解析機能を開発しており、解析データは凸版印刷のセキュアなクラウド内に保存することが可能となっています。
 
