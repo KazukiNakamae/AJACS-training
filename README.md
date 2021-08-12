@@ -157,7 +157,7 @@ AJACSオンライン8
 
 特に、Cas9ヌクレアーゼとガイドRNAの複合体で編集するCRISPR-Cas9では、ガイドRNAのなかにあるわずか20塩基程度のプロトスペーサ配列を置換するだけで様々なゲノム配列を狙うことができます。
 
-![](/images/0b.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/0b.png)
 *ゲノム編集産業化ネットワークより引用*
 
 こうした変異導入によって遺伝子を破壊するノックアウト、あるいは任意の配列を好きな領域へ挿入するノックインなどが行えます。
@@ -195,18 +195,18 @@ AJACSオンライン8
   - 標的を選ぶ際にはできる限りしっかりとアノテーションがついた情報を参照するようにしましょう。本資料末尾にある0章ではNCBIから遺伝子情報をダウンロードしていますが、こうしたものでは一つの遺伝子に対して複数種のアイソフォームが割り当てられているものがあります。完全にノックアウトを行いたい場合はなるべく全てのアイソフォームに重複するExon領域でゲノム編集のターゲットを選択するようにしてください。
 
   - MYOG遺伝子座（myogeninをコード）の場合
-  ![](/images/6a.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/6a.png)
   ※ MYOPARRはMYOGのプロモータに関わるnon-coding RNA
-  ![](/images/1i.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1i.png)
 
   - 場合によっては転写産物にバリアントが存在しているケースがあります。こういった場合は全てのバリアントで重複しているコード領域を見つけてノックアウトを設計するほうがいいでしょう。
 
   - TSC2遺伝子座（tuberinをコード）の場合
-  ![](/images/6b.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/6b.png)
 
   - またコード領域が他の遺伝子と被っていたりするケースがあります。特定の遺伝子のノックアウトの表現型をとりたい場合は、なるべく他の遺伝子のコード領域を破壊しないように設計場所を選ぶほうが無難です。あるいは他の遺伝子ではサイレント変異となるような改変の導入を検討してもいいかもしれません。
 
-  ![](/images/6c.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/6c.png)
 
   - ノックアウトの結果、事前情報からでは想定できなかった転写・翻訳産物が出現するケースもあります。また設計上仕方なく損傷を与えてしまった遺伝子についても発現が変わってしまっている恐れがあります。実験後はゲノム配列の確認とともに、周辺遺伝子のqPCR、ddPCR、ウェスタンブロット等で発現レベルを確認することも必要に応じて検討してみてください。
 
@@ -218,16 +218,16 @@ AJACSオンライン8
     - [論文リンク](https://doi.org/10.1093/bioinformatics/btu743)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2014.025)
     トップページ
-    ![](/images/1a.png)      
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1a.png)      
     検索にヒットした標的候補一覧表
-    ![](/images/1b.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1b.png)
     標的候補の位置関係
-    ![](/images/1c.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1c.png)
     データ出力も可能です。
-    ![](/images/1d.png)
-    ![](/images/1e.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1d.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1e.png)
 - 標的候補一覧表の見方
-  ![](/images/1f.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1f.png)
   - "position"
     - "start - end"はターゲットの位置になります。
     - "+-"はゲノムリファレンス上でどちらのstrand属するかを指します。
@@ -245,14 +245,14 @@ AJACSオンライン8
     - "12mer+PAM"や"8mer+PAM"はPAM結合サイトとプロトスペーサー配列の3´末端から12bp, 8bpのゲノム上での特異性を指します。SpCas9の特異性は位置依存的であることが知られており、3´側に位置するほど特異性が高くなる傾向があります。3´末端から12bp, 8bpの領域で一致するオフターゲットサイトが大量にある場合はゲノムに対して意図しない変異導入を大量に起こしてしまう可能性が高く、ゲノム編集の標的として適切とはいえません。
     - "detail"をクリックすると、検索にヒットした標的配列あるいはオフターゲットサイトがゲノム上のどのあたりに存在するか参照することが可能です。
       - "≤1 mismatch/gap"または"≤2 mismatch/gap"をクリックすることで、ミスマッチ・ギャップを含むオフターゲットサイトも表示することもできます。
-      ![](/images/1g.png)
+      ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1g.png)
 
 ----
 
 #### 【使用例】CRISPRdirectを使って、ノックアウトのための標的を設計する
 
 1. 検索配列を入力します。
-![](/images/1h.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1h.png)
 
 2. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
@@ -261,39 +261,39 @@ AJACSオンライン8
 \>MYOG
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
 
-![](/images/1i.png)
-![](/images/1j.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1i.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1j.png)
 
 3. Cas9のPAM配列を入力します。今回は最も一般的なSpCas9の"NGG"とします。
 
 PAM配列：NGG
 
-![](/images/1k.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1k.png)
 
 4. 特異性を確認するゲノムを指定します。今回は最新のヒトゲノムリファレンスである"Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)"とします。
 ゲノム：Human (Homo sapiens) genome, GRCh38/hg38 (Dec, 2013)
-![](/images/1l.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1l.png)
 
 5. "design"をクリックします。
-![](/images/1m.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1m.png)
 
 6. Resultsの表示を確認します。
-![](/images/1n.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1n.png)
 
 7. ゲノムに対して特異的なターゲットを表示するために、"show highly specific target only"にチェックをいれて更新します（更新は自動で行われます）。
-![](/images/1o.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1o.png)
 
 8. "20mer+PAM"が1で、なおかつ"12mer+PAM"と"8mer+PAM"の数がなるべく少ない標的を選択し、配列をコピーします。
-![](/images/1p.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1p.png)
 
 9. SnapGene Viewerを開き、Edit -> Find -> Find DNA sequenceで配列検索スペースを開き、選択したプロトスペーサ配列"accaccaggctacgagcgga"を検索する
-![](/images/1q.png)
-![](/images/1r.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1q.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1r.png)
 
 9. 緑色で表示されたプロトスペーサ配列"accaccaggctacgagcgga"とその3´末端に隣接するPAM結合サイト"cgg"にフィーチャーをつける。ストランドが把握しやすいように工夫する。
-![](/images/1s.png)
-![](/images/1t.png)
-![](/images/1u.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1s.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1t.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1u.png)
 
 10. プロトスペーサ配列"accaccaggctacgagcgga"をもったガイドRNAを発現させるマテリアル（ベクター等）の作製に用いる一本鎖オリゴヌクレオチドを設計して注文する。
 
@@ -306,7 +306,7 @@ PAM配列：NGG
 
 11. 一本鎖オリゴヌクレオチドを注文します。
   - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
-![](/images/1v.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1v.png)
 FASMACのオリゴDNA注文画面
 
 12. 注文後、CRISPR-Cas9システムを動かすためのマテリアルの作製を行い、ゲノム編集実験を行う。詳しくは下記の参考文献を参照してください。
@@ -331,21 +331,21 @@ FASMACのオリゴDNA注文画面
     - [論文リンク](https://doi.org/10.1093/nar/gky354)
     - [紹介動画 - 統合TV](https://doi.org/10.7875/togotv.2021.023)
     トップページ
-    ![](/images/2a.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2a.png)
     検索にヒットした標的候補のマップ（緑色が高い特異性をもつ標的）
-    ![](/images/2b.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2b.png)
     検索にヒットした標的候補一覧表
-    ![](/images/2c.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2c.png)
     "Cloning / PCR primers"をクリックするとガイドRNA構築に必要なオリゴヌクレオチド情報等が表示されます。
-    ![](/images/2d.png)
-    ![](/images/2e.png)
-    ![](/images/2f.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2d.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2e.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2f.png)
     "show all..."->"Off-target primers"をクリックすると、各オフターゲットサイトに対するPCRプライマーが表示されます。
-    ![](/images/2h.png)
-    ![](/images/2i.png)
-    ![](/images/2j.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2h.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2i.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2j.png)
 - 標的候補一覧表の見方
-  ![](/images/2k.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2k.png)
   - "Position/Strand"
     - 数字はターゲットの位置になります。
     - "fw/revでゲノムリファレンス上でどちらのstrand属するかを指します。
@@ -374,10 +374,10 @@ FASMACのオリゴDNA注文画面
 
 1. 名前を入力します（入力しなくても可）。
 MYOG
-![](/images/2l.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2l.png)
 
 2. 検索配列を入力します。
-![](/images/2m.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2m.png)
 
 3. 配列はSnapGene Viewerからドラッグ->コピーで取得します。今回は開始コドンから159bpを取得します。
 
@@ -385,8 +385,8 @@ MYOG
 
 atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggccccttgaggacaag
 
-![](/images/1i.png)
-![](/images/2n.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/1i.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2n.png)
 
 4. 特異性を確認するゲノム+SNPデータベースを指定します。今回は最新のヒトゲノムリファレンスである"Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar"とします。
 
@@ -394,19 +394,19 @@ atggagctgtatgagacatccccctacttctaccaggaaccccgcttctatgatggggaaaactacctgcctgtccacct
 
 Homo sapiens- Human - UCSC Dec. 2013 (GRCh38/hg38) + SNPs: dbSNP148, Kaviar
 
-![](/images/2o.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2o.png)
 
 5. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
 
 PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 
-![](/images/2p.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2p.png)
 
 6. "SUBMIT"をクリックします。
-![](/images/2q.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2q.png)
 
 7. 結果が表示されるまで待ちます。
-![](/images/2r.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2r.png)
 
 8. 標的のリストが特異性が高い順に表示されます。ノックアウトする上では特異性が高く、なおかつ切断活性が低すぎず、フレームシフトが起こりやすい標的を選ぶのがベストです。
   - 今回は次の基準で選んでみます。
@@ -414,27 +414,27 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
   - 切断活性を示す"Doench '16"と"Mor.-Mateos"がいずれも25を下回らない
   - フレームシフトの起こりやすさを示す"Out-of-Frame"と"Lindel"がいずれも60を上回る
     - これを満たすのは"ACCACCAGGCTACGAGCGGA CGG"、"TCGAACCACCAGGCTACGAG CGG"の二標的となります。どちらでもよいですが今回は"ACCACCAGGCTACGAGCGGA CGG"を選んでみます。
-![](/images/2s.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2s.png)
 
 9. "Cloning / PCR primers"をクリックして、構築に必要なオリゴヌクレオチド情報を表示します。
-![](/images/2t.png)
-![](/images/2u.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2t.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2u.png)
 
 10. [pX330-U6-Chimeric_BB-CBh-hSpCas9プラスミド](https://www.addgene.org/42230/)でガイドRNAを発現させたい場合は"U6 expression from an Addgene plasmid"の項目へ行き、"Select your Addgene plasmid:"で"pX330-U6-Chimeric_BB-CBh-hSpCas9(Zhang lab) + derivatives"を選択します。
-![](/images/2v.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2v.png)
 
 11. 配列が自動で更新されるので、更新された"Primers for gN20 guides"を記録します。
 - gN20-guideRNA113fwU6sensepX330: CACCGaccaccaggctacgagcgga
 - gN20-guideRNA113fwU6antisensepX330: AAACtccgctcgtagcctggtggtC
-![](/images/2w.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2w.png)
 
 12. 一本鎖オリゴヌクレオチドを注文します。
    - FASMACの場合：ウルトラオリゴ/逆相カラム精製/修飾なし
-   ![](/images/2x.png)
+   ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2x.png)
 
 13. 注文後、CRISPR-Cas9システムを動かすためのマテリアルの作製を行い、ゲノム編集実験を行います。詳しくは下記の参考文献を参照してもよいですし、"Click here"示されているリンク先のプロトコールを参照しても大丈夫です。
-![](/images/2y.png)
-![](/images/2z.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2y.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/2z.png)
 
 ##### 参考文献
   * [Ran, F., Hsu, P., Wright, J. et al. Genome engineering using the CRISPR-Cas9 system. Nat Protoc 8, 2281–2308 (2013).](https://doi.org/10.1038/nprot.2013.143)
@@ -465,15 +465,15 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
     - [http://www.rgenome.net/mich-calculator/](http://www.rgenome.net/mich-calculator/)
     - [論文リンク](http://dx.doi.org/10.1038/nmeth.3015)
     トップページ
-    ![](/images/3a.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3a.png)
     入力画面
-    ![](/images/3b.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3b.png)
     検索結果
-    ![](/images/3u.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3u.png)
     詳細な変異パターン情報
-    ![](/images/3v.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3v.png)
 - 結果画面の見方
-  ![](/images/3x.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3x.png)
   - "Microhomology Score"
     - MMEJによる欠失変異のトータルでの起こりやすさを表します。
   - "Out-of-frame Score"
@@ -487,61 +487,61 @@ PAM配列：20bp-NGG - SpCas9, SpCas9-HF1, eSpCas9 1.1
 #### 【使用例】Microhomology-Predictorを使って、ノックアウト結果を予測して標的を決定する
 
 1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"（No.1：ピンク色）と"TCGAACCACCAGGCTACGAGCGG"（No.2：緑色）を例にとって、どちらがノックアウトに相応しそうか調べてみます。
-![](/images/3c.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3c.png)
 
 2. まず標的配列ごとに配列を入力します。Microhomology-Predictorは入力配列のちょうど真ん中に切断サイトがくるように入力しなければちゃんと使えません。野生型SpCas9を使う場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。したがって以下のような手順で入力配列を作っていきましょう。
-![](/images/3d.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3d.png)
   - ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
-    ![](/images/3e.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3e.png)
   - 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
-    ![](/images/3f.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3f.png)
     切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
-    ![](/images/3g.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3g.png)
     切断面を登録するフィーチャーを尋ねられますので、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"を選択します。
-    ![](/images/3h.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3h.png)
     フィーチャー設定画面がでてくるのでOKを押します。
     完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
-    ![](/images/3i.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3i.png)
   - 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
-    ![](/images/3j.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3j.png)
     5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
-    ![](/images/3k.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3k.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
-    ![](/images/3l.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3l.png)
     フィーチャーが反映されます。
   - 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
-    ![](/images/3m.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3m.png)
     3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
-    ![](/images/3n.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3n.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
-    ![](/images/3o.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3o.png)
     フィーチャーが反映されます。
   - "Left_reference"と"Right_reference"の部分をドラッグして、配列をまとめてコピーします。そしてその配列をサイトに入力します。
-    ![](/images/3p.png)
-    ![](/images/3q.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3p.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3q.png)
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
 
 cctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggcccct
 
-![](/images/3r.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3r.png)
 一つの配列を入力したら、"Add"をクリックして入力フォームを追加して、次の配列を入力します。
 
 標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
 
 cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
-![](/images/3s.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3s.png)
 
 3. Submitを押します。
-![](/images/3t.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3t.png)
 
 4. 結果が返ってきます。フレームシフトに起こりやすさを示す"Out-of-frame Score"を記録しておきましょう。66を上回っていればノックアウト標的としては適していると考えられています。今回のケースではどちらの場合も条件を満たしているのでより詳しく見比べてみるのがよいでしょう。
-![](/images/3u.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3u.png)
 
 5. 配列をクリックすると、予測されるMMEJ欠失パターンが表示されます。変異パターンはその起こりやすさの順で並べられています。標的"ACCACCAGGCTACGAGCGGACGG"の場合はトップに9塩基欠失というフレームイン型変異があり、一方で標的"TCGAACCACCAGGCTACGAGCGG"の場合はトップ8までの変異が全てフレームシフト型の変異となっています。この結果では"TCGAACCACCAGGCTACGAGCGG"のほうがノックアウト標的としては適していそうです。
-![](/images/3v.png)
-![](/images/3w.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3v.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3w.png)
 
 補足ですが、標的の選定は変異パターンだけでなく、オフターゲット率なども含めて総合的に判断するのが理想的です。
 今回のようにどちらも"Out-of-frame Score"が66以上であるという場合はオフターゲット率や次に紹介する"inDelphi"のような別ツールでの判定結果を判断材料にしてもいいでしょう。
@@ -554,19 +554,19 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
     - [https://indelphi.giffordlab.mit.edu](https://indelphi.giffordlab.mit.edu)
     - [論文リンク](https://doi.org/10.1038/s41586-018-0686-x)
     ページ画面
-    ![](/images/4a.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4a.png)
     入力画面
-    ![](/images/4b.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4b.png)
     予測される変異パターンのアライメント
-    ![](/images/4c.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4c.png)
     予測される変異パターンのヒストグラム
-    ![](/images/4d.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4d.png)
     過去データとの比較（予測結果の評価）
-    ![](/images/4e.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4e.png)
     予測変異パターンの一覧
-    ![](/images/4f.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4f.png)
 - "Comparison to predictions at 13,273,449 SpCas9 target sites in human exons and introns"の見方
-  ![](/images/4e.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4e.png)
   - "Precision score"は変異の多様度予測したものとなります。この値が高いと細胞集団に対してゲノム編集した際に単一、もしくは少数の変異パターンに収束しやすいことを示します。もしこれが低いとモザイク度の高い編集となる可能性があります。
   - "Microhomology strength score"はマイクロホモロジー配列を介した変異が起こりやすいかどうかを示します。これが低い場合はNHEJ修復のようなマイクロホモロジー配列を介さないランダム性の高い変異が出現しやすくなると考えられます。
   - "Frameshift frequency"はインデルによるフレームシフトの起こりやすさを示します。
@@ -576,37 +576,37 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 #### 【使用例】inDelphiを使って、ノックアウト結果を予測して標的を決定する
 
 1. 今回はMYOG遺伝子の標的配列"ACCACCAGGCTACGAGCGGACGG"（No.1：ピンク色）と"TCGAACCACCAGGCTACGAGCGG"（No.2：緑色）を例にとって、どちらがノックアウトに相応しそうか調べてみます。
-![](/images/3c.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3c.png)
 
 2. 標的配列ごとに配列を入力します。inDelphiは切断面を境界として5´側、3´側配列（各40bp程度を推奨）を入力する必要があります。
   - ゲノム情報をSnapGeneViewerを開き、標的配列を検索します。
-    ![](/images/3e.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3e.png)
   - 以下のようにSnapGeneViewerで切断面を記録します。先ほども述べたように野生型SpCas9の場合、切断サイトはPAM結合サイトの5´末端から３塩基上流にとなります。
-    ![](/images/3f.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3f.png)
     切断面を左クリックして"|"をあわせます。この状態で"Features"->"Add Cleavage Site..."を選択します。
-    ![](/images/3g.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3g.png)
     切断面を登録するフィーチャーを尋ねられますので、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"を選択します。
-    ![](/images/3h.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3h.png)
     フィーチャー設定画面がでてくるのでOKを押します。
     完了すると、"CRISPR-Cas9標的（プロトスペーサ部分）No.1"のフィーチャー表示に"↑"マークがつけられます。これが切断面の表示です。
-    ![](/images/3i.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3i.png)
   - 以下のように切断面から5´方向40bpに"Left_reference"というフィーチャーをつけます。
-    ![](/images/3j.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3j.png)
     5´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
-    ![](/images/3k.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3k.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
-    ![](/images/3l.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3l.png)
     フィーチャーが反映されます。
   - 切断面から3´方向40bpに"Right_reference"というフィーチャーをつけます。
-    ![](/images/3m.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3m.png)
     3´方向40bpの配列をドラッグして、"Features"->"Add Features..."をクリックします。
-    ![](/images/3n.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3n.png)
     フィーチャー名を入力してOKを押します。好みで色をつけておくとわかりやすいです。
-    ![](/images/3o.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3o.png)
     フィーチャーが反映されます。
   - "Left_reference"と"Right_reference"の部分をそれぞれドラッグして、配列をコピーします。そしてサイトの左側フォームと右側フォームに入力します。
-    ![](/images/3p.png)
-    ![](/images/3q.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3p.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/3q.png)
 
 標的配列が"ACCACCAGGCTACGAGCGGACGG"の入力配列：
 
@@ -614,7 +614,7 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
 右側フォーム：ggacggagctcaccctgagccccgaggccccagggcccct
 
-![](/images/4g.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4g.png)
 
 標的配列が"TCGAACCACCAGGCTACGAGCGG"の入力配列：
 
@@ -622,27 +622,27 @@ cctgcctgtccacctccagggcttcgaaccaccaggctacgagcggacggagctcaccctgagccccgaggccccagggc
 
 右側フォーム：gagcggacggagctcaccctgagccccgaggccccagggc
 
-![](/images/4h.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4h.png)
 
 3. PAM配列を指定します。今回は最も一般的なSpCas9の"NGG"とします。
 PAM配列：NGG
-![](/images/4i.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4i.png)
 
 4. "HCT116", "HEK293", "K562", "U2OS", "mESC"の中でご自身が使われている細胞株をクリックします。今回はゲノム編集技術の基礎開発でよく使われる"HEK293"細胞株を選択します。
-![](/images/4j.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4j.png)
 
 5. 自動的に予測が始まるのでしばらく待ちます。
-![](/images/4k.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4k.png)
 
 6. 結果が返ってきます。モザイク度を示す"Precision score"とフレームシフト発生率を示す"Frameshift frequency"に着目してみましょう。
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
-    ![](/images/4l.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4l.png)
     Precision score：0.48（high）
     Frameshift frequency：72.9%（typical）
 
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
-    ![](/images/4m.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4m.png)
     Precision score：0.37（typical）
     Frameshift frequency：85.3%（high）
   
@@ -652,11 +652,11 @@ PAM配列：NGG
 
   - 標的配列が"ACCACCAGGCTACGAGCGGACGG"の場合
 
-    ![](/images/4n.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4n.png)
 
   - 標的配列が"TCGAACCACCAGGCTACGAGCGG"の場合
 
-    ![](/images/4o.png)
+    ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4o.png)
 
   これをみると"ACCACCAGGCTACGAGCGGACGG"では変異のうち1塩基挿入・9塩基欠失が>20%という結果がでています。一方で"TCGAACCACCAGGCTACGAGCGG"では1塩基挿入が12.7%となっています。
 
@@ -680,10 +680,10 @@ Microhomology-PredictorとinDelphiの使い分けに関してはよくわから�
 またこうした致死性等についてはデータベース上にヒントがある場合があります。たとえばヒト遺伝子だと[DepMap](https://depmap.org/portal/)等でGene essentialityの評価がでていますし、マウスでも[IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)で胚性致死の確認等が可能です。その他[PubMed](https://pubmed.ncbi.nlm.nih.gov/)で遺伝子名を検索すればそういった類の情報が見つかる場合もあります。事前にインターネットを活用して十分にリサーチされることをお勧めします。
 
 - [DepMap](https://depmap.org/portal/)
-  ![](/images/4p.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4p.png)
 
 - [IMPC](https://www.mousephenotype.org/data/genes/MGI:1890520)
-  ![](/images/4q.png)
+  ![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/4q.png)
 
 ##### 関連ツール
 - [SPROUT](https://zou-group.github.io/SPROUT)
@@ -739,7 +739,7 @@ MMEJ等を利用したノックインはホモロジーアームが20-40bpほど
 #### [PITCh designer 2.0](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
   - [https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html](https://www.mls.sci.hiroshima-u.ac.jp/smg/PITChdesigner/index.html)
   - [論文リンク](https://doi.org/10.1080/21655979.2017.1313645)
-![](/images/5a.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5a.png)
 
 入力例
 
@@ -807,7 +807,7 @@ WindowはBase Editorの種類によって違っており、以下のツールで
 #### [BE-Designer](http://www.rgenome.net/be-designer/)
   - [http://www.rgenome.net/be-designer/](http://www.rgenome.net/be-designer/)
   - [論文リンク](https://doi.org/10.1186/s12859-018-2585-4)
-![](/images/5b.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5b.png)
 
 入力例
 
@@ -849,7 +849,7 @@ Base editing window：
 #### [BE-Hive](https://www.crisprbehive.design)
   - [https://www.crisprbehive.design](https://www.crisprbehive.design)
   - [論文リンク](https://doi.org/10.1016/j.cell.2020.05.037)
-![](/images/5c.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5c.png)
 
 入力例
 
@@ -880,7 +880,7 @@ Frame 2, + strand
 #### [PrimeDesign](https://drugthatgene.pinellolab.partners.org)
   - [https://drugthatgene.pinellolab.partners.org](https://drugthatgene.pinellolab.partners.org)
   - [論文リンク](https://doi.org/10.1038/s41467-021-21337-7)
-![](/images/5d.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5d.png)
 
 入力例
 
@@ -912,7 +912,7 @@ RNA-DNA結合のCRISPR-Cas9とは違って、TALENはタンパク質-DNA結合�
 #### [TALEN Targeter (old version with design guidelines)](https://tale-nt.cac.cornell.edu/node/add/talen-old)
   - [https://tale-nt.cac.cornell.edu/node/add/talen-old](https://tale-nt.cac.cornell.edu/node/add/talen-old)
   - [論文リンク](https://doi.org/10.1093/nar/gks608)
-![](/images/5e.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5e.png)
 
 入力例
 
@@ -959,7 +959,7 @@ CRISPR-Cas13は一本鎖RNA対して配列特異的な結合をすることが�
 #### [Cas13design](https://cas13design.nygenome.org)
   - [https://cas13design.nygenome.org](https://cas13design.nygenome.org)
   - [論文リンク](https://doi.org/10.1038/s41587-020-0456-9)
-![](/images/5f.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5f.png)
 
 入力例
 
@@ -1016,7 +1016,7 @@ TIDE解析はそうしたアプローチのもとでゲノム編集サンプル�
   - [論文リンク](https://doi.org/10.1093/nar/gku936)
   - [統合TV](https://doi.org/10.7875/togotv.2021.040)
 
-![](/images/5h.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5h.png)
 
 まず以下のリンクから使用するシーケンスファイルをダウンロードしてください。
 [ダウンロードリンク（自動）](https://ice.synthego.com/misc/ice_example_files.zip) from [ICE Analysis | SYNTHEGO](https://ice.synthego.com/#/)
@@ -1054,12 +1054,12 @@ high_edit_GRK2_experiment.ab1
 #### [CRISPResso2](https://crispresso.pinellolab.partners.org/submission)
   - [https://crispresso.pinellolab.partners.org/submission](https://crispresso.pinellolab.partners.org/submission)
   - [論文リンク](https://doi.org/10.1038/s41587-019-0032-3)
-![](/images/5i.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5i.png)
 
 入力例
 
 以下の三角ボタンをクリックすることで例示データを自動入力することができます。
-![](/images/5j.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5j.png)
 
 CRISPR-Cas9によるノックアウトサンプルの解析の場合は"NHEJ(Non-homologous end joining)"の入力パターンがあてはまります。
 
@@ -1112,7 +1112,7 @@ UCSCの[UCSCのgenomue browser](http://genome-asia.ucsc.edu/cgi-bin/hgTracks?db=
 
 また予測切断活性やオフターゲットも評価されており、このサイトだけでも十分な選定が可能となっています。
 
-![](/images/5k.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5k.png)
 
 ---
 
@@ -1125,7 +1125,7 @@ CRISPR-Cas9が発表されて早9年が経とうとしており、これまで�
 #### [dbGuide](https://sgrnascorer.cancer.gov/dbguide/)
   - [https://sgrnascorer.cancer.gov/dbguide/](https://sgrnascorer.cancer.gov/dbguide/)
   - [論文リンク](https://doi.org/10.1093/nar/gkaa848)
-![](/images/5l.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5l.png)
 
 入力例
 
@@ -1148,7 +1148,7 @@ SNP配列の構築はノックインで実現されることが多いですが�
 #### [MHcut Browser](http://mhcut-browser.vhost38.genap.ca)
   - [http://mhcut-browser.vhost38.genap.ca](http://mhcut-browser.vhost38.genap.ca)
   - [論文リンク](https://doi.org/10.1038/s41467-019-12829-8)
-![](/images/5m.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5m.png)
 
 入力例
 
@@ -1193,7 +1193,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 またVやRといった縮重塩基にも対応しているのでモチーフ検索等にも活用可能です。
 
-![](/images/5n.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5n.png)
 
 入力例
 
@@ -1229,7 +1229,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 - [https://gggenome.retrieva.jp/](https://gggenome.retrieva.jp/)
 
-![](/images/5o.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5o.png)
 
 ---
 
@@ -1245,7 +1245,7 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 中前 和恭：nakamae@pt-bio.com
 
-![](/images/5p.jpg)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/5p.jpg)
 
 
 ----
@@ -1260,31 +1260,31 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 1.	まずウェブ検索でアメリカ国立生物工学情報センター（NCBI）へアクセスする。
  
-![](/images/7a.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7a.png)
 
 2.	検索欄で「Gene」を選択して、「MYOG」と入力して検索
 
-![](/images/7b.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7b.png)
 
 3.	検索対象をヒト（Homo sapiens）に限定するためにクリック
  
-![](/images/7c.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7c.png)
 
 4.	MYOG – myogeninがでてくるのでクリックして先に進む。
 
-![](/images/7d.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7d.png)
  
 5.	MYOG遺伝子の総合情報が表示される。この中で今回は人のゲノム上の遺伝子配列が知りたいので「Genomic regions, transcripts, and products」の欄へ行って、GenBankをクリックする。
 
-![](/images/7e.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7e.png)
  
 6.	遺伝子配列に関する総合情報（GenBankフォーマット）が表示されるので、この情報をファイルとして保存するために「Send to」をクリック。
  
-![](/images/7f.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7f.png)
 
 7.	フォーマットとして「Comple Record」「File」「GenBank」を指定して、「Create File」でダウンロードする。そうすると「sequence.gb」というファイルが手にはいる。
 
-![](/images/7g.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7g.png)
  
 ### SnapGeneViewerで配列情報をわかりやすく表示する
 
@@ -1292,19 +1292,19 @@ DBCLSが運営している商用利用可能な高速配列検索サイトです
 
 [配布元のリンク](https://www.snapgene.com/snapgene-viewer/)
 
-![](/images/7h.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7h.png)
 
 9.	自身のメールアドレスを入力してダウンロード・インストールを行う。
  
-![](/images/7i.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7i.png)
 
 10.	SnapGene Viewerでsequence.gbを開くと次のようになる。小豆色の矢印がアミノ酸に変換されるコード領域となっている。
 
-![](/images/7j.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7j.png)
  
 11.	"Sequence"をクリックすると以下のようになる。小豆色の線の上に表示されているのが該当するDNA二重鎖配列となっている。
 
-![](/images/7k.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/7k.png)
 
 ※ちなみに無料版の"SnapGene Viewer"では配列の編集ができません。編集する場合は有償版である"SnapGene"を利用するか"[Serial Cloner](http://serialbasics.free.fr/Serial_Cloner.html)"のような別ソフトを併用されるとよいでしょう。
 
