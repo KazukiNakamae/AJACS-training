@@ -151,7 +151,7 @@ AJACSオンライン8
 
 最も基本的なものは、TALENやCRISPR-Cas9などのゲノム編集ツールを使ってDNAに二本鎖切断を導入し、その際に発生するDNA修復経路を介して変異導入します。
 
-![](/images/0a.png)
+![](https://raw.githubusercontent.com/KazukiNakamae/AJACS-training/main/images/0a.png)
 *ゲノム編集産業化ネットワークより引用*
 
 
