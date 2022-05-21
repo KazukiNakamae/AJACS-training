@@ -8,6 +8,14 @@ PDFの資料を参照されている方へ
 
 ----
 
+訂正履歴
+
+2022/05/22
+表記にミスがございました。大変失礼いたしました。
+CRISPROR -> CRISPOR
+
+----
+
 プラチナバイオ株式会社 兼
 広島大学 ゲノム編集イノベーションセンター   
 [中前和恭](https://researchmap.jp/knakamae)
@@ -53,7 +61,7 @@ AJACSオンライン8
 - 1章. ゲノム編集を使ってノックアウトのための標的を設計する
   - CRISPR-Cas9を使ったノックアウト設計
     - CRISPRdirect
-    - CRISPROR
+    - CRISPOR
   - CRISPR-Cas9を使ったノックアウト結果の予測
     - Microhomology-Predictor
     - InDelphi
@@ -325,7 +333,7 @@ FASMACのオリゴDNA注文画面
 
 ----
 
-#### [CRISPROR](http://crispor.tefor.net)
+#### [CRISPOR](http://crispor.tefor.net)
 - CRISPR-Cas9標的を検索できるウェブツール。標的検索だけでなく、そのオフターゲットの検索からプライマー設計までも含めた包括的な情報収集が可能。
     - [http://crispor.tefor.net](http://crispor.tefor.net)
     - [論文リンク](https://doi.org/10.1093/nar/gky354)
@@ -370,7 +378,7 @@ FASMACのオリゴDNA注文画面
 
 ----
 
-#### 【使用例】CRISPRORを使って、ノックアウトのための標的を設計する
+#### 【使用例】CRISPORを使って、ノックアウトのための標的を設計する
 
 1. 名前を入力します（入力しなくても可）。
 MYOG
